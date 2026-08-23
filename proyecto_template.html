@@ -1,0 +1,164 @@
+<!--
+  ══════════════════════════════════════════════════════════════════
+  PLANTILLA PARA AGREGAR UN NUEVO PROYECTO
+  ══════════════════════════════════════════════════════════════════
+  Esta página NO se debe subir a Hostinger tal cual — es solo tu
+  maqueta de referencia. Pasos para usarla:
+
+  1. Duplica este archivo y renómbralo como "proyecto_NOMBRE.html"
+     (todo en minúsculas, sin espacios ni tildes, ej: proyecto_costa.html).
+
+  2. Crea la carpeta de fotos: img/NOMBRE/ (ej: img/costa/) y sube ahí
+     las fotos del proyecto ya comprimidas (mismo criterio que
+     magnolias/tandem: máximo 1600px de lado, formato .webp).
+
+  3. Reemplaza en todo este archivo:
+       - "NOMBRE DEL PROYECTO" por el nombre real (ej: "Costa Verde")
+       - "NOMBRE DEL CLIENTE" por el cliente real (ej: "Constructora XYZ")
+       - "NOMBRE" (en las rutas img/NOMBRE/...) por el nombre de tu
+         carpeta de fotos del paso 2
+
+  4. Ajusta las categorías del filtro (Cocina / Clóset / etc. más abajo)
+     según lo que tenga ESE proyecto — puedes borrar categorías que no
+     apliquen o duplicar el bloque <article> para agregar más fotos.
+
+  5. Agrega el link en 3 lugares:
+       a) components/header.html → dentro de <ul class="nav__sublist"
+          id="nav-sublist-proyectos">, copia una línea existente y
+          cambia el href/texto.
+       b) proyectos.html → copia una de las tarjetas de proyecto
+          existentes (el bloque con class="contenido__seccion-proyectos")
+          y actualiza imagen, título y descripción.
+       c) sitemap.xml → agrega una línea <url> nueva con la URL del
+          proyecto (mismo formato que las que ya existen).
+
+  6. Borra este bloque de comentario de instrucciones antes de subir
+     el archivo final.
+  ══════════════════════════════════════════════════════════════════
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto NOMBRE DEL PROYECTO | NOMBRE DEL CLIENTE - Madermel</title>
+    <meta
+      name="description"
+      content="Fabricación e instalación de [resumen corto de lo que se hizo] en melamine para el proyecto NOMBRE DEL PROYECTO de NOMBRE DEL CLIENTE."
+    />
+    <link rel="canonical" href="https://madermel.com/proyecto_NOMBRE" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Madermel S.A.C." />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:url" content="https://madermel.com/proyecto_NOMBRE" />
+    <meta property="og:title" content="Proyecto NOMBRE DEL PROYECTO | NOMBRE DEL CLIENTE - Madermel" />
+    <meta
+      property="og:description"
+      content="Fabricación e instalación de [resumen corto] en melamine para el proyecto NOMBRE DEL PROYECTO."
+    />
+    <meta property="og:image" content="https://madermel.com/img/NOMBRE/NOMBRE_001.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Proyecto NOMBRE DEL PROYECTO | NOMBRE DEL CLIENTE - Madermel" />
+    <meta name="twitter:image" content="https://madermel.com/img/NOMBRE/NOMBRE_001.webp" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--header inicio-->
+    <div id="headerPlaceholder"></div>
+    <div class="header__page tandem">
+      <div class="contenedor">
+        <div class="content__page contenedor contenedor__tandem">
+          <div class="content__title title__tandem">Proyecto NOMBRE DEL PROYECTO</div>
+        </div>
+      </div>
+    </div>
+    <!--header fin-->
+    <!-- main inicio -->
+    <main class="contenedor seccion">
+      <!--
+        FILTROS: un <li> por cada categoría de fotos que tenga este
+        proyecto (ej: Cocina, Clóset, Baño, Puertas...). El primero
+        debe llevar la clase "active-project" para que se vea
+        seleccionado al cargar la página. El "data-filter" debe
+        coincidir exactamente con la clase que le pongas a las
+        tarjetas <article> de esa categoría más abajo.
+      -->
+      <ul class="projects__filters">
+        <li
+          class="projects__item projects__line active-project"
+          data-filter=".categoria1"
+        >
+          <h3 class="projects__title">Categoría 1</h3>
+        </li>
+
+        <li class="projects__item projects__line" data-filter=".categoria2">
+          <h3 class="projects__title">Categoría 2</h3>
+        </li>
+      </ul>
+
+      <section class="proyecto__madermel grid">
+        <!-- CATEGORÍA 1: duplica este <article> por cada foto que quieras agregar -->
+        <article class="projects__card categoria1">
+          <div class="projects__shape">
+            <img
+              src="img/NOMBRE/NOMBRE_001.webp"
+              alt=""
+              class="projects__img"
+            />
+            <h3 class="projects__name">Nombre corto del ambiente (ej: Cocina principal)</h3>
+          </div>
+        </article>
+        <article class="projects__card categoria1">
+          <div class="projects__shape">
+            <img
+              src="img/NOMBRE/NOMBRE_002.webp"
+              alt=""
+              class="projects__img"
+            />
+            <h3 class="projects__name">Nombre corto del ambiente</h3>
+          </div>
+        </article>
+
+        <!-- CATEGORÍA 2: mismo patrón, cambiando la clase por "categoria2" -->
+        <article class="projects__card categoria2">
+          <div class="projects__shape">
+            <img
+              src="img/NOMBRE/NOMBRE_003.webp"
+              alt=""
+              class="projects__img"
+            />
+            <h3 class="projects__name">Nombre corto del ambiente</h3>
+          </div>
+        </article>
+      </section>
+
+      <!-- No tocar: esto es el visor de imagen ampliada (lightbox), es el mismo en todos los proyectos -->
+      <div class="container-img">
+        <img src="" alt="" class="img-show" />
+        <i class="icon x-lightBox"><svg class="icon-svg"><use href="#fa-xmark"></use></svg></i>
+      </div>
+      <a class="button" href="/proyectos"
+          >Volver<i class="icon portal__button-icon"
+            ><svg class="icon-svg"><use href="#fa-left-long"></use></svg
+          ></i
+        ></a>
+    </main>
+    <!-- main fin -->
+
+    <!--footer inicio-->
+    <div id="footerPlaceholder"></div>
+    <!--footer fin-->
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>

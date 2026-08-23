@@ -1,0 +1,107 @@
+.contacto__intro {
+  max-width: none;
+  margin: 0 0 4rem;
+  text-align: left;
+  border-left: 0.5rem solid var(--first-color);
+  padding-left: 2rem;
+}
+.contacto__intro p {
+  color: var(--second-color);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.contacto__grid {
+  display: grid;
+  gap: 4rem;
+}
+.contacto__info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.contacto__info-item i {
+  font-size: 2.4rem;
+  color: var(--second-color);
+  width: 3rem;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+.contacto__info-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+.contacto__info-item p,
+.contacto__info-item a {
+  color: var(--black-color);
+  font-size: 1.6rem;
+}
+.contacto__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.contacto__whatsapp i {
+  font-size: 2rem;
+}
+.contacto__form {
+  background-color: var(--container-ligth-color);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.form__grupo {
+  margin-bottom: 2rem;
+}
+.form__grupo label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--second-color);
+}
+.form__grupo input,
+.form__grupo textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid var(--text-color-light);
+  border-radius: 0.5rem;
+  font-family: var(--fuente);
+  font-size: 1.5rem;
+  background-color: var(--white-color);
+}
+.form__grupo textarea {
+  resize: vertical;
+  min-height: 12rem;
+}
+.form__honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+.form__submit {
+  width: 100%;
+  border: none;
+  font-size: 1.7rem;
+}
+.form__mensaje {
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+.form__mensaje--exito {
+  background-color: #dff5e1;
+  color: #1e6b2e;
+}
+.form__mensaje--error {
+  background-color: #fde2e2;
+  color: #9c2626;
+}
+@media (min-width: 900px) {
+  .contacto__grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}

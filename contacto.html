@@ -3,16 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Madermel</title>
+    <title>Contacto - Madermel | Cotiza tu proyecto en melamine y madera</title>
+    <meta
+      name="description"
+      content="Escríbenos por WhatsApp o completa el formulario. Atendemos consultas todos los días de 8am a 6pm. San Martín de Porres - Lima."
+    />
+    <link rel="canonical" href="https://madermel.com/contacto" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Madermel S.A.C." />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:url" content="https://madermel.com/contacto" />
+    <meta property="og:title" content="Contacto - Madermel | Cotiza tu proyecto en melamine y madera" />
+    <meta
+      property="og:description"
+      content="Escríbenos por WhatsApp o completa el formulario. Atendemos consultas todos los días de 8am a 6pm."
+    />
+    <meta property="og:image" content="https://madermel.com/img/portal_contact.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contacto - Madermel" />
+    <meta name="twitter:image" content="https://madermel.com/img/portal_contact.webp" />
+
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
   <body>
     <!--header inicio-->
@@ -23,21 +40,110 @@
     <div class="header__page">
       <div class="contenedor">
         <div class="header__page-content">
-          <img src="img/portal_contact.webp" alt="Imagen portal nosotros" />
-          <div class="content__page">
-            <div class="content__title">Brindamos el mejor servicio</div>
-            <div class="content__description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </div>
+          <img src="img/portal_contact.webp" alt="Imagen portal contacto" />
+          <div class="content__page contenedor">
+            <div class="content__title">Conversemos sobre tu proyecto</div>
           </div>
         </div>
       </div>
     </div>
-    <img
-      class="contenedor"
-      src="/img/pagina_en_construccion.webp"
-      alt="Página en Construcción"
-    />
+
+    <main class="main">
+      <section class="seccion">
+        <div class="contenedor">
+          <div class="contacto__intro">
+            <p>
+              Cuéntanos qué necesitas fabricar o instalar y te respondemos a la
+              brevedad. Trabajamos tanto con constructoras — closets, cocinas
+              y áreas comunes para departamentos — como con proyectos a
+              medida para tu hogar u oficina, con el respaldo de más de 18
+              años de experiencia en el rubro del melamine y la madera.
+            </p>
+          </div>
+
+          <div class="contacto__grid">
+            <div class="contacto__info">
+              <div class="contacto__info-item">
+                <i class="icon"><svg class="icon-svg"><use href="#fa-square-phone"></use></svg></i>
+                <div>
+                  <h3>Teléfono</h3>
+                  <a href="tel:+51991178471">+51 991 178 471</a>
+                </div>
+              </div>
+              <div class="contacto__info-item">
+                <i class="icon"><svg class="icon-svg"><use href="#fa-envelope"></use></svg></i>
+                <div>
+                  <h3>Correo</h3>
+                  <a href="mailto:ventas1@madermel.com">ventas1@madermel.com</a>
+                </div>
+              </div>
+              <div class="contacto__info-item">
+                <i class="icon"><svg class="icon-svg"><use href="#fa-location-dot"></use></svg></i>
+                <div>
+                  <h3>Ubicación</h3>
+                  <p>San Martín de Porres - Lima</p>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/51991178471"
+                class="button contacto__whatsapp"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon"><svg class="icon-svg"><use href="#fa-whatsapp"></use></svg></i>
+                Escríbenos por WhatsApp
+              </a>
+            </div>
+
+            <div class="contacto__form">
+              <div
+                id="mensajeExito"
+                class="form__mensaje form__mensaje--exito"
+                style="display: none"
+              >
+                Gracias, tu mensaje fue enviado. Te responderemos a la brevedad.
+              </div>
+              <div
+                id="mensajeError"
+                class="form__mensaje form__mensaje--error"
+                style="display: none"
+              >
+                No pudimos enviar tu mensaje. Escríbenos directamente por
+                WhatsApp o al correo ventas1@madermel.com.
+              </div>
+
+              <form action="/enviar-contacto.php" method="POST">
+                <div class="form__grupo">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" required />
+                </div>
+                <div class="form__grupo">
+                  <label for="contacto">Teléfono o correo</label>
+                  <input type="text" id="contacto" name="contacto" required />
+                </div>
+                <div class="form__grupo">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <div class="form__honeypot" aria-hidden="true">
+                  <label for="web">No completar este campo</label>
+                  <input
+                    type="text"
+                    id="web"
+                    name="web"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </div>
+                <button type="submit" class="button form__submit">
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!--main contacto fin-->
 
     <!--footer inicio-->
@@ -45,5 +151,14 @@
     <!--footer fin-->
     <script src="js/script.js" defer></script>
     <script src="js/header.js"></script>
+    <script>
+      const parametros = new URLSearchParams(window.location.search);
+      const estado = parametros.get("enviado");
+      if (estado === "1") {
+        document.getElementById("mensajeExito").style.display = "block";
+      } else if (estado === "0") {
+        document.getElementById("mensajeError").style.display = "block";
+      }
+    </script>
   </body>
 </html>

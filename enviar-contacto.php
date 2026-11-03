@@ -20,14 +20,22 @@ $nombre = limpiar($_POST['nombre'] ?? '');
 $contacto = limpiar($_POST['contacto'] ?? '');
 $mensaje = trim($_POST['mensaje'] ?? '');
 
+// Tipo de cliente elegido en el formulario (solo se aceptan los dos valores conocidos)
+$tipos = [
+    'inmobiliaria' => 'Inmobiliaria o constructora',
+    'propietario' => 'Propietario',
+];
+$tipo = $tipos[$_POST['tipo'] ?? ''] ?? 'No indicado';
+
 if ($nombre === '' || $contacto === '' || $mensaje === '') {
     header('Location: /contacto?enviado=0');
     exit;
 }
 
 $destinatario = 'ventas1@madermel.com';
-$asunto = 'Nuevo mensaje desde madermel.com';
-$cuerpo = "Nombre: {$nombre}\n" .
+$asunto = "Nuevo mensaje desde madermel.com ({$tipo})";
+$cuerpo = "Tipo de cliente: {$tipo}\n" .
+          "Nombre: {$nombre}\n" .
           "Contacto: {$contacto}\n\n" .
           "Mensaje:\n{$mensaje}\n";
 

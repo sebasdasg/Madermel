@@ -1,102 +1,97 @@
-.page__nosotros {
-  background-color: var(--second-color);
+/*=============== CIFRAS Y CLIENTES ===============*/
+.cifras-seccion {
+  padding: 7rem 0;
 }
-.quienes-somos-contenido {
-  color: var(--white-color);
-  margin-bottom: 3rem;
-}
-.quienes-somos-contenido img {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-.quienes-somos-contenido p {
-  text-align: justify;
-  line-height: 1.5;
-}
-.quienes-somos__valores {
-  border-radius: 1rem;
-  border: 1px solid var(--first-color);
-  text-align: center;
-  padding: 2rem;
-}
-.quienes-somos__valores h3 {
-  color: var(--first-color);
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin-bottom: 3rem;
-}
-.quienes-somos__box {
+.cifras {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1.5rem));
-  justify-content: center;
-  gap: 2rem;
+  gap: 3.2rem;
 }
-.quienes-somos__valore-box i {
-  color: var(--first-color);
-  font-size: 3rem;
+@media (min-width: 700px) {
+  .cifras {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.quienes-somos__valore-box p {
-  color: var(--white-color);
+.cifras__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 2.4rem;
+  border-left: 1px solid rgb(247 245 240 / 20%);
 }
-.propositos {
-  background-color: var(--container-ligth-color);
+.cifras__num {
+  font-size: clamp(4rem, 5vw, 5.6rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #D9B597; /* madera aclarada para que se lea sobre grafito */
 }
-.proposito__item img {
-  width: 18rem;
-  display: block;
-  margin: auto;
+.cifras__label {
+  font-size: 1.45rem;
+  color: var(--color-texto-claro);
 }
-.proposito__item-descripcion {
-  margin: 3rem 0;
+.clientes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.6rem 3.2rem;
+  margin-top: 5rem;
+  padding-top: 3.2rem;
+  border-top: 1px solid rgb(247 245 240 / 12%);
 }
-.proposito__item-descripcion h3 {
-  display: inline-block;
-  color: var(--second-color);
-  padding: 0 1rem 0.5rem 0;
-  border-bottom: 3px solid var(--first-color);
+.clientes p {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-texto-claro);
+}
+.clientes ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 4rem;
+}
+.clientes li {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/*=============== VALORES ===============*/
+@media (min-width: 980px) {
+  .tarjetas--5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.tarjetas--5 .tarjeta {
+  padding: 2.4rem 2.2rem;
+}
+.tarjetas--5 .tarjeta__icono {
+  margin-bottom: 1.6rem;
+}
+.tarjetas--5 .tarjeta h3 {
+  margin-bottom: 0;
+}
+
+/*=============== MISIÓN Y VISIÓN ===============*/
+.proposito {
+  display: grid;
+  gap: 1.6rem;
+}
+@media (min-width: 900px) {
+  .proposito {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.proposito__item {
+  padding: 3.6rem 3.2rem;
+}
+.proposito__item .tarjeta__icono {
   margin-bottom: 2rem;
 }
-.proposito__item-descripcion p {
-  color: var(--second-color);
-  line-height: 1.5;
-  text-align: justify;
+.proposito__item .kicker {
+  margin-bottom: 1.2rem;
 }
-@media (min-width: 768px) {
-  .content__page .content__title {
-    font-size: 3.5rem;
-  }
-  .proposito__item {
-    display: flex;
-  }
-  .proposito__item-descripcion {
-    margin-left: 3rem;
-  }
-}
-@media (min-width: 1024px) {
-  .content__page .content__title {
-    font-size: 4rem;
-  }
-  .quienes-somos-contenido {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    gap: 3rem;
-  }
-  .quienes-somos__valores {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .quienes-somos__valores h3 {
-    margin-bottom: 0;
-  }
-  .quienes-somos__box {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3rem;
-  }
-  .propositos .contenedor {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-  }
+.proposito__item p {
+  font-size: 1.6rem;
+  color: var(--color-texto);
 }

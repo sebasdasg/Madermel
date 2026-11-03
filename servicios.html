@@ -29,32 +29,42 @@
     <meta name="twitter:title" content="Servicios - Madermel" />
     <meta name="twitter:image" content="https://madermel.com/img/IMG_018.webp" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!--header inicio-->
     <div id="headerPlaceholder"></div>
-    <div class="header__page">
-      <div class="contenedor">
-        <div class="header__page-content">
-          <img src="img/IMG_018.webp" alt="Imagen portal nosotros" />
-          <div class="content__page contenedor">
-            <h1 class="content__title">Brindamos el mejor servicio</h1>
-          </div>
-        </div>
-      </div>
-    </div>
     <!--header fin-->
-    <!--main servicios inicio-->
-    <main class="main">
-      <section class="seccion seccion-servicios">
-        <div class="contenedor contenedor-servicios">
-          <div class="imagen-servicios">
-            <img src="img/service-melamine.webp" alt="imagen de servicios" />
+
+    <main>
+      <!--cabecera de página-->
+      <section class="page-hero">
+        <img class="page-hero__img" src="/img/IMG_018.webp" alt="" fetchpriority="high" />
+        <div class="contenedor">
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a href="/">Inicio</a><span aria-hidden="true">/</span><span>Soluciones inmobiliarias</span>
+          </nav>
+          <span class="kicker kicker--claro kicker--linea">Soluciones inmobiliarias</span>
+          <h1>Mobiliario a medida para cada ambiente del proyecto.</h1>
+          <p>
+            Fabricamos e instalamos closets, cocinas, puertas, muebles de baño y áreas comunes para constructoras, inmobiliarias y propietarios en Lima.
+          </p>
+        </div>
+      </section>
+
+      <!--intro-->
+      <section class="seccion">
+        <div class="contenedor intro">
+          <div class="intro__img">
+            <img src="/img/service-melamine.webp" alt="Mueble de melamine fabricado por Madermel" loading="lazy" />
           </div>
-          <div class="descripcion-servicios">
-            <h3>Servicios</h3>
+          <div class="intro__texto">
+            <span class="kicker">Lo que hacemos</span>
+            <h2>Fabricación, instalación y mantenimiento en melamine y madera.</h2>
             <p>
               En MADERMEL S.A.C., ofrecemos una amplia variedad de servicios especializados en la fabricación y mantenimiento de muebles de melamine y puertas contraplacadas. Diseñamos y producimos muebles personalizados para hogares, oficinas y negocios, garantizando funcionalidad, estética y durabilidad. También nos especializamos en la fabricación de puertas contraplacadas de alta calidad, ideales para cualquier espacio.
             </p>
@@ -64,106 +74,138 @@
           </div>
         </div>
       </section>
-      <section class="seccion seccion-detalle">
-        <div class="contenedor card__container">
-          <article class="card__article">
-            <img
-              src="img/magnolias/magnolia_closet_001.webp"
-              alt="Closet de melamine fabricado a medida"
-              class="card__img"
-            />
 
-            <div class="card__data">
-              <h2 class="card__title">Closets y cocinas para obra</h2>
-              <p class="card__description">
-                Fabricación e instalación de closets, cocinas y áreas
-                comunes para constructoras.
-              </p>
+      <!--servicios-->
+      <section class="seccion seccion--arena">
+        <div class="contenedor">
+          <div class="seccion__cabecera">
+            <div>
+              <span class="kicker">Servicios</span>
+              <h2>Una respuesta integral para cada ambiente residencial.</h2>
             </div>
-          </article>
+            <p>
+              Mobiliario funcional para departamentos y áreas comunes, desarrollado a partir de las necesidades específicas de cada proyecto.
+            </p>
+          </div>
 
-          <article class="card__article">
-            <img
-              src="img/cordova/cordova_puertas_001.webp"
-              alt="Puerta contraplacada de madera fabricada e instalada por Madermel"
-              class="card__img"
-            />
+          <div class="servicios-grid">
+            <article class="servicio-card">
+              <img src="/img/magnolias/magnolia_closet_001.webp" alt="Closet de melamine fabricado a medida" loading="lazy" />
+              <div class="servicio-card__cuerpo">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-closet"></use></svg></span>
+                <h3>Closets y cocinas para obra</h3>
+                <p>Fabricación e instalación de closets, cocinas y áreas comunes para constructoras.</p>
+              </div>
+            </article>
+            <article class="servicio-card">
+              <img src="/img/cordova/cordova_puertas_001.webp" alt="Puerta contraplacada de madera fabricada e instalada por Madermel" loading="lazy" />
+              <div class="servicio-card__cuerpo">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-puerta"></use></svg></span>
+                <h3>Puertas</h3>
+                <p>Fabricación e instalación de puertas contraplacadas, incluidas puertas capa sol y sombra.</p>
+              </div>
+            </article>
+            <article class="servicio-card">
+              <img src="/img/oficina-galeria-1.webp" alt="Escritorio y mueble de oficina en melamine" loading="lazy" />
+              <div class="servicio-card__cuerpo">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-mueble"></use></svg></span>
+                <h3>Muebles a medida</h3>
+                <p>Centros de entretenimiento, escritorios, muebles de oficina en casa y estantería, diseñados según tu espacio.</p>
+              </div>
+            </article>
+            <article class="servicio-card">
+              <img src="/img/cordova/cordova_bano_008.webp" alt="Mueble de baño en melamine" loading="lazy" />
+              <div class="servicio-card__cuerpo">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-bano"></use></svg></span>
+                <h3>Muebles de baño</h3>
+                <p>Fabricación e instalación de muebles de baño en melamine, resistentes a la humedad.</p>
+              </div>
+            </article>
+            <article class="servicio-card">
+              <img src="/img/dalias/dalias_gradas_002.webp" alt="Escalera de madera con pasamanos" loading="lazy" />
+              <div class="servicio-card__cuerpo">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-escalera"></use></svg></span>
+                <h3>Escaleras de madera</h3>
+                <p>Fabricación e instalación de peldaños y pasamanos de madera.</p>
+              </div>
+            </article>
+            <article class="servicio-card">
+              <img src="/img/home-service.webp" alt="Mantenimiento de mueble de melamine" loading="lazy" />
+              <div class="servicio-card__cuerpo">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-martillo"></use></svg></span>
+                <h3>Acabados y mantenimiento</h3>
+                <p>Pintura, ajustes, cambio de bisagras y correderas, y renovación de acabados.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-            <div class="card__data">
-              <h2 class="card__title">Puertas</h2>
-              <p class="card__description">
-                Fabricación e instalación de puertas contraplacadas, incluidas
-                puertas capa sol y sombra.
-              </p>
+      <!--proceso-->
+      <section class="seccion">
+        <div class="contenedor">
+          <div class="seccion__cabecera">
+            <div>
+              <span class="kicker">Fabricación e instalación</span>
+              <h2>Un proceso coordinado para hacer viable cada solución.</h2>
             </div>
-          </article>
+            <p>
+              La propuesta se organiza alrededor de los requerimientos del proyecto, desde la evaluación inicial hasta la instalación del mobiliario.
+            </p>
+          </div>
+          <ol class="tarjetas tarjetas--4 lista-pasos">
+            <li class="tarjeta">
+              <span class="lista-pasos__num">01</span>
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-regla"></use></svg></span>
+              <h3>Evaluación</h3>
+              <p>Revisión de espacios y necesidades de mobiliario.</p>
+            </li>
+            <li class="tarjeta">
+              <span class="lista-pasos__num">02</span>
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-capas"></use></svg></span>
+              <h3>Desarrollo</h3>
+              <p>Definición de piezas y materiales para cada ambiente.</p>
+            </li>
+            <li class="tarjeta">
+              <span class="lista-pasos__num">03</span>
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-martillo"></use></svg></span>
+              <h3>Fabricación</h3>
+              <p>Producción del mobiliario a medida.</p>
+            </li>
+            <li class="tarjeta">
+              <span class="lista-pasos__num">04</span>
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-check"></use></svg></span>
+              <h3>Instalación</h3>
+              <p>Coordinación de la entrega final en obra.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-          <article class="card__article">
-            <img
-              src="img/oficina-galeria-1.webp"
-              alt="Escritorio y mueble de oficina en melamine"
-              class="card__img"
-            />
-
-            <div class="card__data">
-              <h2 class="card__title">Muebles a medida</h2>
-              <p class="card__description">
-                Centros de entretenimiento, escritorios, muebles de oficina en
-                casa y estantería, diseñados según tu espacio.
-              </p>
+      <!--contacto-->
+      <section class="seccion seccion--arena">
+        <div class="contenedor">
+          <div class="publicos">
+            <div class="publico publico--oscuro">
+              <span class="kicker">Inmobiliarias y constructoras</span>
+              <h3>Solicita una propuesta comercial para tu proyecto.</h3>
+              <p>Cuéntanos sobre el desarrollo, los ambientes y el tipo de mobiliario que requieres.</p>
+              <a class="button" href="/contacto?tipo=inmobiliaria">
+                Conversemos sobre tu proyecto<svg class="ico"><use href="#i-mail"></use></svg>
+              </a>
             </div>
-          </article>
-
-          <article class="card__article">
-            <img
-              src="img/cordova/cordova_bano_008.webp"
-              alt="Mueble de baño en melamine"
-              class="card__img"
-            />
-
-            <div class="card__data">
-              <h2 class="card__title">Muebles de baño</h2>
-              <p class="card__description">
-                Fabricación e instalación de muebles de baño en melamine,
-                resistentes a la humedad.
-              </p>
+            <div class="publico publico--claro">
+              <span class="kicker">Propietarios</span>
+              <h3>¿Buscas mobiliario para tu departamento?</h3>
+              <p>Escríbenos para conversar sobre una solución personalizada para tu espacio.</p>
+              <a class="button button--linea" href="/contacto?tipo=propietario">
+                Solicitar asesoría<svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </a>
             </div>
-          </article>
-
-          <article class="card__article">
-            <img
-              src="img/dalias/dalias_gradas_002.webp"
-              alt="Escalera de madera con pasamanos"
-              class="card__img"
-            />
-
-            <div class="card__data">
-              <h2 class="card__title">Escaleras de madera</h2>
-              <p class="card__description">
-                Fabricación e instalación de peldaños y pasamanos de madera.
-              </p>
-            </div>
-          </article>
-
-          <article class="card__article">
-            <img
-              src="img/home-service.webp"
-              alt="Mantenimiento de mueble de melamine"
-              class="card__img"
-            />
-
-            <div class="card__data">
-              <h2 class="card__title">Acabados y mantenimiento</h2>
-              <p class="card__description">
-                Pintura, ajustes, cambio de bisagras y correderas, y
-                renovación de acabados.
-              </p>
-            </div>
-          </article>
+          </div>
         </div>
       </section>
     </main>
-    <!--main servicios fin-->
 
     <!--footer inicio-->
     <div id="footerPlaceholder"></div>

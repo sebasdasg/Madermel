@@ -1,21 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+/* La fuente Manrope se carga con <link> en el <head> de cada página */
 
 :root {
-  --fuente: "Poppins", sans-serif;
+  --fuente: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --first-color: #FFD71F;
-  --second-color: #0D0039;
-  --hover-color: #f7b941;
-  --lilac-color: #dcdcf6;
-  --white-color: #ffffff;
-  --black-color: #4f5d6a; /* antes #707f8d: poco contraste sobre blanco */
-  --container-ligth-color: hsl(0, 0%, 93%);
-  --text-color-light: hsl(206, 4%, 75%);
+  /* Paleta corporativa cálida de MADERMEL */
+  --color-fondo: #F7F5F0;        /* marfil cálido: fondo principal */
+  --color-texto: #1F2726;        /* verde grafito: títulos y contenido */
+  --color-primario: #9B633C;     /* marrón madera: botones, enlaces y acentos */
+  --color-primario-hover: #84522F;
+  --color-secundario: #E8E1D5;   /* beige arena: superficies y bloques suaves */
 
-  --smaller-font-size: 0.75rem;
+  /* Derivados de la paleta */
+  --color-texto-suave: #5B6462;  /* párrafos secundarios sobre marfil */
+  --color-borde: #E1D9CC;
+  --color-blanco: #FFFFFF;
+  --color-grafito-claro: #2A3433; /* superficies dentro de bloques oscuros */
+  --color-texto-claro: #C9CFCC;   /* párrafos sobre fondo grafito */
+  --color-marca-amarillo: #FFD71F; /* solo del logo; no usar en la interfaz */
 
-  --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-  --box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  --radio: 0.6rem;
+  --sombra-suave: 0 1px 2px rgb(31 39 38 / 4%), 0 8px 24px rgb(31 39 38 / 6%);
+  --sombra-media: 0 2px 4px rgb(31 39 38 / 6%), 0 16px 40px rgb(31 39 38 / 12%);
 
-  --separacion: 5rem;
+  --separacion: 10rem;
+  --alto-topbar: 3.6rem;
 }

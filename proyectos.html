@@ -29,6 +29,9 @@
     <meta name="twitter:title" content="Proyectos - Madermel" />
     <meta name="twitter:image" content="https://madermel.com/img/IMG_020.webp" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -37,111 +40,127 @@
     <div id="headerPlaceholder"></div>
     <!--header fin-->
 
-    <!--main proyectos inicio-->
-    <div class="header__page">
-      <div class="contenedor">
-        <div class="header__page-content">
-          <img src="img/IMG_020.webp" alt="Imagen portal nosotros" />
-          <div class="content__page contenedor">
-            <h1 class="content__title">Transformamos tus espacios a tu estilo</h1>
+    <main>
+      <!--cabecera de página-->
+      <section class="page-hero">
+        <img class="page-hero__img" src="/img/IMG_020.webp" alt="" fetchpriority="high" />
+        <div class="contenedor">
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a href="/">Inicio</a><span aria-hidden="true">/</span><span>Proyectos</span>
+          </nav>
+          <span class="kicker kicker--claro kicker--linea">Proyectos</span>
+          <h1>Mobiliario concebido para habitar mejor.</h1>
+          <p>
+            Obras realizadas para constructoras e inmobiliarias en Lima: cocinas, clósets, lavanderías, muebles de baño, pasos y gradas, y áreas comunes.
+          </p>
+        </div>
+      </section>
+
+      <!--galeria de proyectos-->
+      <section class="seccion seccion--arena">
+        <div class="contenedor">
+          <h2 class="sr-only">Nuestros proyectos</h2>
+          <div class="proyectos-grid">
+            <a href="/proyecto_tandem" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/IMG_008.webp" alt="Áreas comunes del proyecto Tándem Parc fabricadas en melamine" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Áreas comunes</span>
+                  <h3>Tándem Parc · Marcan</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_magnolias" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/IMG_009.webp" alt="Cocina del proyecto Magnolias fabricada en melamine" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Cocinas y clósets</span>
+                  <h3>Magnolias · Checor</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_dalias" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/dalias/dalias_areas_013.webp" alt="Recepción con panel de listones de madera y mesón de mármol del proyecto Dalias" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Áreas comunes</span>
+                  <h3>Dalias · Checor</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_cordova" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/cordova/cordova_closet_009.webp" alt="Walking clóset con repisas y cajones del proyecto Cordova" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Clósets y baños</span>
+                  <h3>Cordova · AyD</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_porta360" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/porta360/porta360_cocina_036.webp" alt="Cocina con muebles altos de melamine y torre de horno del proyecto Porta 360" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Cocinas y lavanderías</span>
+                  <h3>Porta 360 · Checor</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_montalcamo" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/montalcamo/montalcamo_bano_002.webp" alt="Mueble de baño flotante en melamine con lavatorio del proyecto Mont" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Muebles de baño</span>
+                  <h3>Mont · Alcamo</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <section class="seccion seccion__ligth-color">
+      </section>
+
+      <!--contacto-->
+      <section class="seccion">
         <div class="contenedor">
-          <h2 class="page__title">proyectos</h2>
-          <div class="contenido__seccion seccion__proyectos">
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_tandem" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/IMG_008.webp"
-                    alt="Áreas comunes del proyecto Tándem Parc fabricadas en melamine"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Tándem Parc | Marcan</h3>
-                  <p>Áreas Comunes.</p>
-                </div>
+          <div class="publicos">
+            <div class="publico publico--oscuro">
+              <span class="kicker">Inmobiliarias y constructoras</span>
+              <h3>Solicita una propuesta comercial para tu proyecto.</h3>
+              <p>Cuéntanos sobre el desarrollo, los ambientes y el tipo de mobiliario que requieres.</p>
+              <a class="button" href="/contacto?tipo=inmobiliaria">
+                Conversemos sobre tu proyecto<svg class="ico"><use href="#i-mail"></use></svg>
               </a>
             </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_magnolias" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/IMG_009.webp"
-                    alt="Cocina del proyecto Magnolias fabricada en melamine"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Magnolias | Checor</h3>
-                  <p>Cocinas, Clóset, Lavanderias, Montantes.</p>
-                </div>
-              </a>
-            </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_dalias" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/dalias/dalias_areas_013.webp"
-                    alt="Recepción con panel de listones de madera y mesón de mármol del proyecto Dalias"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Dalias | Checor</h3>
-                  <p>Cocinas, Pasos y gradas, Áreas Comunes.</p>
-                </div>
-              </a>
-            </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_cordova" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/cordova/cordova_closet_009.webp"
-                    alt="Walking clóset con repisas y cajones del proyecto Cordova"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Cordova | AyD</h3>
-                  <p>Clóset, Muebles de baño, Pasos y gradas, Puertas.</p>
-                </div>
-              </a>
-            </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_porta360" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/porta360/porta360_cocina_036.webp"
-                    alt="Cocina con muebles altos de melamine y torre de horno del proyecto Porta 360"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Porta 360 | Checor</h3>
-                  <p>Cocinas, Clóset, Muebles de baño, Lavanderías, Pasos y gradas.</p>
-                </div>
-              </a>
-            </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_montalcamo" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/montalcamo/montalcamo_bano_002.webp"
-                    alt="Mueble de baño flotante en melamine con lavatorio del proyecto Mont"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Mont | Alcamo</h3>
-                  <p>Muebles de baño.</p>
-                </div>
+            <div class="publico publico--claro">
+              <span class="kicker">Propietarios</span>
+              <h3>¿Buscas mobiliario para tu departamento?</h3>
+              <p>Escríbenos para conversar sobre una solución personalizada para tu espacio.</p>
+              <a class="button button--linea" href="/contacto?tipo=propietario">
+                Solicitar asesoría<svg class="ico"><use href="#i-arrow-right"></use></svg>
               </a>
             </div>
           </div>
         </div>
       </section>
-    
-    <!--main proyectos fin-->
+    </main>
 
     <!--footer inicio-->
     <div id="footerPlaceholder"></div>

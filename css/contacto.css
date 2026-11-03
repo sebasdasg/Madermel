@@ -1,70 +1,154 @@
-.contacto__intro {
-  max-width: none;
-  margin: 0 0 4rem;
-  text-align: left;
-  border-left: 0.5rem solid var(--first-color);
-  padding-left: 2rem;
-}
-.contacto__intro p {
-  color: var(--second-color);
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.6;
-}
 .contacto__grid {
   display: grid;
-  gap: 4rem;
+  gap: 4.8rem;
+  align-items: start;
 }
-.contacto__info-item {
+@media (min-width: 980px) {
+  .contacto__grid {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 8rem;
+  }
+}
+.contacto__info h2 {
+  margin-bottom: 2rem;
+  max-width: 14em;
+}
+.contacto__datos {
+  margin-top: 4rem;
+  display: grid;
+  gap: 2.4rem;
+}
+.contacto__datos li {
   display: flex;
   align-items: flex-start;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1.6rem;
 }
-.contacto__info-item i {
-  font-size: 2.4rem;
-  color: var(--second-color);
-  width: 3rem;
-  text-align: center;
-  margin-top: 0.3rem;
+.contacto__icono {
+  display: grid;
+  place-items: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  flex-shrink: 0;
 }
-.contacto__info-item h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.3rem;
+.contacto__datos h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+  margin-bottom: 0.2rem;
 }
-.contacto__info-item p,
-.contacto__info-item a {
-  color: var(--black-color);
-  font-size: 1.6rem;
+.contacto__datos a {
+  color: var(--color-primario);
+  font-weight: 600;
 }
+.contacto__datos a:hover {
+  text-decoration: underline;
+}
+
+/*=============== FORMULARIO ===============*/
 .contacto__form {
-  background-color: var(--container-ligth-color);
-  padding: 3rem;
-  border-radius: 1rem;
-  box-shadow: var(--box-shadow);
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 3.2rem 2.4rem;
+  box-shadow: var(--sombra-suave);
+}
+@media (min-width: 600px) {
+  .contacto__form {
+    padding: 4rem;
+  }
+}
+.form__tipo {
+  border: none;
+  margin: 0 0 2.4rem;
+  padding: 0;
+}
+.form__tipo legend {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+.form__tipo-opciones {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .form__tipo-opciones {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.form__opcion {
+  position: relative;
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background-color: var(--color-fondo);
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+.form__opcion input {
+  margin-top: 0.4rem;
+  accent-color: var(--color-primario);
+  width: 1.6rem;
+  height: 1.6rem;
+  flex-shrink: 0;
+}
+.form__opcion span {
+  font-size: 1.3rem;
+  line-height: 1.45;
+  color: var(--color-texto-suave);
+}
+.form__opcion strong {
+  display: block;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--color-texto);
+  margin-bottom: 0.2rem;
+}
+.form__opcion:has(input:checked) {
+  border-color: var(--color-primario);
+  background-color: #FBF8F3;
+  box-shadow: 0 0 0 1px var(--color-primario);
 }
 .form__grupo {
   margin-bottom: 2rem;
 }
 .form__grupo label {
   display: block;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.6rem;
-  color: var(--second-color);
 }
 .form__grupo input,
 .form__grupo textarea {
   width: 100%;
-  padding: 1.2rem;
-  border: 1px solid var(--text-color-light);
-  border-radius: 0.5rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
   font-family: var(--fuente);
-  font-size: 1.6rem;
-  background-color: var(--white-color);
+  font-size: 1.6rem; /* 16px evita que iOS haga zoom al escribir */
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.form__grupo input:focus,
+.form__grupo textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  background-color: var(--color-blanco);
+  box-shadow: 0 0 0 3px rgb(155 99 60 / 15%);
 }
 .form__grupo textarea {
   resize: vertical;
-  min-height: 12rem;
+  min-height: 13rem;
 }
 .form__honeypot {
   position: absolute;
@@ -74,25 +158,23 @@
 }
 .form__submit {
   width: 100%;
-  border: none;
-  font-size: 1.7rem;
+  margin-top: 0.8rem;
 }
 .form__mensaje {
-  padding: 1.5rem 2rem;
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
+  padding: 1.4rem 1.8rem;
+  border-radius: var(--radio);
+  margin-bottom: 2.4rem;
+  font-size: 1.45rem;
   font-weight: 500;
 }
+.form__mensaje[hidden] {
+  display: none;
+}
 .form__mensaje--exito {
-  background-color: #dff5e1;
-  color: #1e6b2e;
+  background-color: #E4EFE2;
+  color: #2D5A2A;
 }
 .form__mensaje--error {
-  background-color: #fde2e2;
-  color: #9c2626;
-}
-@media (min-width: 900px) {
-  .contacto__grid {
-    grid-template-columns: 1fr 1.2fr;
-  }
+  background-color: #F6E1DC;
+  color: #8A2E1E;
 }

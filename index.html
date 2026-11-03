@@ -33,6 +33,9 @@
     />
     <meta name="twitter:image" content="https://madermel.com/img/hero_1.webp" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
 
@@ -78,254 +81,309 @@
     <div id="headerPlaceholder"></div>
     <!--header fin-->
 
-    <!--hero inicio-->
-    <section class="hero">
-      <img
-        class="hero__img"
-        src="/img/tandem/tandem_03.webp"
-        alt="Sala de juegos con muebles de melamine y madera fabricados por Madermel"
-        fetchpriority="high"
-      />
-      <div class="contenedor hero__content">
-        <p class="hero__kicker">Melamine y madera a medida · Lima</p>
-        <h1 class="hero__title">Muebles a medida que transforman tus espacios</h1>
-        <p class="hero__text">
-          Fabricamos e instalamos closets, cocinas, puertas y áreas comunes para constructoras y particulares.
-        </p>
-        <div class="hero__actions">
-          <a class="button" href="contacto">Cotizar proyecto</a>
-          <a class="button button--ghost" href="proyectos">Ver proyectos</a>
-        </div>
-      </div>
-    </section>
-    <!--hero fin-->
-
-    <!--confianza inicio-->
-    <section class="confianza" aria-label="Por qué confiar en Madermel">
-      <div class="contenedor">
-        <div class="confianza__grid">
-          <div class="confianza__item">
-            <span class="confianza__num">18+</span>
-            <span class="confianza__label">años de experiencia en el rubro</span>
-          </div>
-          <div class="confianza__item">
-            <span class="confianza__num">6</span>
-            <span class="confianza__label">proyectos de obra en nuestra galería</span>
-          </div>
-          <div class="confianza__item">
-            <span class="confianza__num">4</span>
-            <span class="confianza__label">constructoras que confían en nosotros</span>
-          </div>
-        </div>
-        <div class="confianza__clientes">
-          <p>Han trabajado con nosotros</p>
-          <ul>
-            <li>Checor</li>
-            <li>Marcan</li>
-            <li>AyD</li>
-            <li>Alcamo</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!--confianza fin-->
-
     <!--main inicio-->
-    <main class="main">
-      <section class="seccion seccion__ligth-color">
+    <main>
+      <!--hero inicio-->
+      <section class="hero">
+        <img
+          class="hero__img"
+          src="/img/tandem/tandem_03.webp"
+          alt=""
+          fetchpriority="high"
+        />
+        <div class="contenedor hero__grid">
+          <div class="hero__content">
+            <span class="kicker kicker--claro kicker--linea">Mobiliario para proyectos inmobiliarios</span>
+            <h1 class="hero__title">Mobiliario a medida para proyectos que exigen precisión.</h1>
+            <p class="hero__text">
+              Diseñamos, fabricamos e instalamos soluciones en melamine y madera para departamentos, edificios y espacios residenciales en Lima.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="/contacto?tipo=inmobiliaria">
+                Solicita una propuesta comercial<svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </a>
+              <a class="button button--ghost button--abajo" href="#proyectos">
+                Ver proyectos<svg class="ico"><use href="#i-arrow-down"></use></svg>
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero__card" aria-label="Cómo acompañamos tu obra">
+            <span class="kicker">Soluciones para obra</span>
+            <h2 class="hero__card-title">De la idea a la instalación final.</h2>
+            <p class="hero__card-text">
+              Acompañamos el desarrollo del mobiliario con una ruta clara para coordinar necesidades, medidas y entrega.
+            </p>
+            <ol class="pasos">
+              <li class="pasos__item">
+                <span class="pasos__num">01</span>
+                <div>
+                  <h3>Revisamos el requerimiento</h3>
+                  <p>Planos, espacios y necesidades del proyecto.</p>
+                </div>
+              </li>
+              <li class="pasos__item">
+                <span class="pasos__num">02</span>
+                <div>
+                  <h3>Desarrollamos la solución</h3>
+                  <p>Materiales y mobiliario según cada ambiente.</p>
+                </div>
+              </li>
+              <li class="pasos__item">
+                <span class="pasos__num">03</span>
+                <div>
+                  <h3>Fabricamos e instalamos</h3>
+                  <p>Coordinando la intervención en obra.</p>
+                </div>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </section>
+      <!--hero fin-->
+
+      <!--soluciones inicio-->
+      <section class="seccion" id="soluciones">
         <div class="contenedor">
-          <h2 class="page__title">Servicios</h2>
-          <div class="servicios__content">
-            <div class="servicios__content-card">
-              <img
-                src="img/fabricación_1.png"
-                alt="Imagen de servicio construcción"
-              />
-              <div class="servicios__descripcion">
-                <h3 class="servicios__content-title">Fabricación</h3>
-                <p class="servicios__content-texto">
-                  Creamos muebles a medida para proyectos de cocina, closet, baños y áreas comunes, adaptándonos a los planos y requerimientos de cada obra.
-                  Utilizamos melamina de alta calidad y procesos de corte, tapacanto y ensamblaje que garantizan precisión, durabilidad y un acabado profesional.
-                </p>
-              </div>
+          <div class="seccion__cabecera">
+            <div>
+              <span class="kicker">Soluciones inmobiliarias</span>
+              <h2>Una respuesta integral para cada ambiente residencial.</h2>
             </div>
-            
-            <div class="servicios__content-card">
-              <img
-                src="img/instalación_1.png"
-                alt="Imagen de servicio construcción"
-              />
-              <div class="servicios__descripcion">
-                <h3 class="servicios__content-title">Instalación</h3>
-                <p class="servicios__content-texto">
-                  Ejecutamos instalaciones limpias, eficientes y alineadas a los estándares de la obra.
-                  Nuestro equipo técnico asegura una correcta nivelación, anclaje, ensamblaje y acabado final de cada mueble para garantizar su funcionalidad y estética.
-                  Coordinamos directamente con el avance de la construcción para cumplir plazos y asegurar una entrega sin contratiempos.
-                </p>
-              </div>
-            </div>
-            
-            <div class="servicios__content-card">
-              <img
-                src="img/mantenimiento_1.png"
-                alt="Imagen de servicio mantenimiento"
-              />
-              <div class="servicios__descripcion">
-                <h3 class="servicios__content-title">Mantenimiento</h3>
-                <p class="servicios__content-texto">
-                  Ofrecemos servicios de mantenimiento preventivo y correctivo para muebles de melamina y madera en viviendas, edificios, oficinas y comercios.
-                  Realizamos ajustes, reforzamientos, cambio de bisagras, correderas, reposición de piezas y renovación de acabados.
-                  Nuestro objetivo es extender la vida útil de tus muebles y mantenerlos en óptimas condiciones.
-                </p>
-              </div>
-            </div>
+            <p>
+              Mobiliario funcional para departamentos y áreas comunes, desarrollado a partir de las necesidades específicas de cada proyecto.
+            </p>
+          </div>
+
+          <div class="tarjetas tarjetas--3">
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-cocina"></use></svg></span>
+              <h3>Cocinas altas y bajas</h3>
+              <p>Soluciones de cocina adaptadas a la distribución de cada departamento.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-closet"></use></svg></span>
+              <h3>Clósets</h3>
+              <p>Mobiliario de almacenamiento integrado al espacio residencial.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-lavanderia"></use></svg></span>
+              <h3>Lavanderías</h3>
+              <p>Organización funcional para zonas de lavado y servicio.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-bano"></use></svg></span>
+              <h3>Muebles de baño</h3>
+              <p>Piezas a medida para baños y ambientes complementarios.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-ductos"></use></svg></span>
+              <h3>Ductos y espacios técnicos</h3>
+              <p>Soluciones que integran requerimientos funcionales del proyecto.</p>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-comunes"></use></svg></span>
+              <h3>Áreas comunes</h3>
+              <p>Mobiliario para los espacios compartidos de cada desarrollo.</p>
+            </article>
           </div>
         </div>
       </section>
-      <section class="seccion nosotros__page">
+      <!--soluciones fin-->
+
+      <!--proyectos inicio-->
+      <section class="seccion seccion--arena" id="proyectos">
         <div class="contenedor">
-          <h2 class="page__title">Nosotros</h2>
-          <div class="contenido__seccion">
-            <div class="contenido__seccion-video">
-              <video
-                src="/img/video_about_2.mp4"
-                loop
-                muted
-                autoplay
-                playsinline
-                webkit-playsinline
-              ></video>
+          <div class="seccion__cabecera seccion__cabecera--enlace">
+            <div>
+              <span class="kicker">Proyectos</span>
+              <h2>Mobiliario concebido para habitar mejor.</h2>
             </div>
-            <div class="contenido__seccion-nosotros">
-              <h3>Nuestro compromiso con la calidad se refleja en cada proyecto!</h3>
-              <p>
-                En MADERMEL S.A.C. nos enorgullece ofrecer productos y servicios de alta calidad en el rubro del melamine y madera. Con una trayectoria de 18 años en el mercado, nos hemos consolidado como líderes en el mercado, gracias a nuestra dedicación y compromiso con la excelencia.
-              </p>
-              <a class="button" href="nosotros">Leer más</a>
-            </div>
+            <a class="enlace-flecha" href="/contacto?tipo=inmobiliaria">
+              Conversemos sobre tu proyecto<svg class="ico"><use href="#i-arrow-right"></use></svg>
+            </a>
           </div>
-          <div class="contenido__seccion-extra">
-            <div class="nosotros__valores">
-              <i class="icon"><svg class="icon-svg"><use href="#fa-shield-halved"></use></svg></i>
-              <h3>Seguridad</h3>
-            </div>
-            <div class="nosotros__valores">
-              <i class="icon"><svg class="icon-svg"><use href="#fa-handshake-simple"></use></svg></i>
-              <h3>Confianza</h3>
-            </div>
-            <div class="nosotros__valores">
-              <i class="icon"><svg class="icon-svg"><use href="#fa-award"></use></svg></i>
-              <h3>Garantía</h3>
-            </div>
-            <div class="nosotros__valores">
-              <i class="icon"><svg class="icon-svg"><use href="#fa-helmet-safety"></use></svg></i>
-              <h3>Soluciones</h3>
+
+          <div class="proyectos-grid">
+            <a href="/proyecto_tandem" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/IMG_008.webp" alt="Áreas comunes del proyecto Tándem Parc fabricadas en melamine" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Áreas comunes</span>
+                  <h3>Tándem Parc · Marcan</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_magnolias" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/IMG_009.webp" alt="Cocina del proyecto Magnolias fabricada en melamine" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Cocinas y clósets</span>
+                  <h3>Magnolias · Checor</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_dalias" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/dalias/dalias_areas_013.webp" alt="Recepción con panel de listones de madera y mesón de mármol del proyecto Dalias" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Áreas comunes</span>
+                  <h3>Dalias · Checor</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_cordova" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/cordova/cordova_closet_009.webp" alt="Walking clóset con repisas y cajones del proyecto Cordova" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Clósets y baños</span>
+                  <h3>Cordova · AyD</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_porta360" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/porta360/porta360_cocina_036.webp" alt="Cocina con muebles altos de melamine y torre de horno del proyecto Porta 360" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Cocinas y lavanderías</span>
+                  <h3>Porta 360 · Checor</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+            <a href="/proyecto_montalcamo" class="proyecto-card">
+              <div class="proyecto-card__img">
+                <img src="/img/montalcamo/montalcamo_bano_002.webp" alt="Mueble de baño flotante en melamine con lavatorio del proyecto Mont" loading="lazy" />
+              </div>
+              <div class="proyecto-card__cuerpo">
+                <div>
+                  <span class="kicker">Muebles de baño</span>
+                  <h3>Mont · Alcamo</h3>
+                </div>
+                <svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--proyectos fin-->
+
+      <!--como trabajamos inicio-->
+      <section class="seccion" id="como-trabajamos">
+        <div class="contenedor proceso">
+          <div class="proceso__img">
+            <img src="/img/about_first.webp" alt="Herramientas de carpintería y bocetos de diseño sobre una mesa de trabajo" loading="lazy" />
+          </div>
+          <div class="proceso__contenido">
+            <span class="kicker">Fabricación e instalación</span>
+            <h2>Un proceso coordinado para hacer viable cada solución.</h2>
+            <p class="texto-suave proceso__intro">
+              La propuesta se organiza alrededor de los requerimientos del proyecto, desde la evaluación inicial hasta la instalación del mobiliario.
+            </p>
+            <div class="tarjetas">
+              <article class="tarjeta tarjeta--arena">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-regla"></use></svg></span>
+                <h3>Evaluación</h3>
+                <p>Revisión de espacios y necesidades de mobiliario.</p>
+              </article>
+              <article class="tarjeta tarjeta--arena">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-capas"></use></svg></span>
+                <h3>Desarrollo</h3>
+                <p>Definición de piezas y materiales para cada ambiente.</p>
+              </article>
+              <article class="tarjeta tarjeta--arena">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-martillo"></use></svg></span>
+                <h3>Fabricación</h3>
+                <p>Producción del mobiliario a medida.</p>
+              </article>
+              <article class="tarjeta tarjeta--arena">
+                <span class="tarjeta__icono"><svg class="ico"><use href="#i-check"></use></svg></span>
+                <h3>Instalación</h3>
+                <p>Coordinación de la entrega final en obra.</p>
+              </article>
             </div>
           </div>
         </div>
       </section>
-      <section class="seccion seccion__ligth-color">
+      <!--como trabajamos fin-->
+
+      <!--experiencia inicio-->
+      <section class="seccion seccion--grafito">
+        <div class="contenedor bloque-media">
+          <div>
+            <span class="kicker">Madermel S.A.C.</span>
+            <h2>Experiencia aplicada a espacios que se viven todos los días.</h2>
+            <p class="texto-suave">
+              Desarrollamos mobiliario en melamine y madera para proyectos residenciales y requerimientos personalizados, con foco en funcionalidad, detalle y una instalación cuidadosamente coordinada.
+            </p>
+            <a class="button button--ghost" href="/contacto?tipo=inmobiliaria">
+              Desarrolla tu próximo proyecto con nosotros<svg class="ico"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </div>
+          <div class="bloque-media__media">
+            <video
+              src="/img/video_about_2.mp4"
+              loop
+              muted
+              autoplay
+              playsinline
+              webkit-playsinline
+              preload="metadata"
+              aria-label="Video del trabajo de Madermel"
+            ></video>
+          </div>
+        </div>
+      </section>
+      <!--experiencia fin-->
+
+      <!--contacto inicio-->
+      <section class="seccion" id="contacto">
         <div class="contenedor">
-          <h2 class="page__title">proyectos</h2>
-          <div class="contenido__seccion seccion__proyectos">
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_tandem" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/IMG_008.webp"
-                    alt="Áreas comunes del proyecto Tándem Parc fabricadas en melamine"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Tándem Parc | Marcan</h3>
-                  <p>Áreas Comunes.</p>
-                </div>
+          <div class="seccion__cabecera">
+            <div>
+              <span class="kicker">Contacto</span>
+              <h2>Elige la conversación que necesitas iniciar.</h2>
+            </div>
+            <p>
+              Priorizamos las consultas comerciales de inmobiliarias y constructoras, sin dejar de atender proyectos personalizados para propietarios.
+            </p>
+          </div>
+
+          <div class="publicos">
+            <div class="publico publico--oscuro">
+              <span class="kicker">Inmobiliarias y constructoras</span>
+              <h3>Solicita una propuesta comercial para tu proyecto.</h3>
+              <p>Cuéntanos sobre el desarrollo, los ambientes y el tipo de mobiliario que requieres.</p>
+              <a class="button" href="/contacto?tipo=inmobiliaria">
+                Conversemos sobre tu proyecto<svg class="ico"><use href="#i-mail"></use></svg>
               </a>
             </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_magnolias" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/IMG_009.webp"
-                    alt="Cocina del proyecto Magnolias fabricada en melamine"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Magnolias | Checor</h3>
-                  <p>Cocinas, Clóset, Lavanderias, Montantes.</p>
-                </div>
-              </a>
-            </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_dalias" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/dalias/dalias_areas_013.webp"
-                    alt="Recepción con panel de listones de madera y mesón de mármol del proyecto Dalias"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Dalias | Checor</h3>
-                  <p>Cocinas, Pasos y gradas, Áreas Comunes.</p>
-                </div>
-              </a>
-            </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_cordova" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/cordova/cordova_closet_009.webp"
-                    alt="Walking clóset con repisas y cajones del proyecto Cordova"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Cordova | AyD</h3>
-                  <p>Clóset, Muebles de baño, Pasos y gradas, Puertas.</p>
-                </div>
-              </a>
-            </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_porta360" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/porta360/porta360_cocina_036.webp"
-                    alt="Cocina con muebles altos de melamine y torre de horno del proyecto Porta 360"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Porta 360 | Checor</h3>
-                  <p>Cocinas, Clóset, Muebles de baño, Lavanderías, Pasos y gradas.</p>
-                </div>
-              </a>
-            </div>
-            <div class="contenido__seccion-proyectos">
-              <a href="proyecto_montalcamo" class="card__proyecto">
-                <div class="img__proyecto">
-                  <img
-                    src="img/montalcamo/montalcamo_bano_002.webp"
-                    alt="Mueble de baño flotante en melamine con lavatorio del proyecto Mont"
-                  />
-                </div>
-                <div class="contenido__proyecto">
-                  <h3>Mont | Alcamo</h3>
-                  <p>Muebles de baño.</p>
-                </div>
+            <div class="publico publico--claro">
+              <span class="kicker">Propietarios</span>
+              <h3>¿Buscas mobiliario para tu departamento?</h3>
+              <p>Escríbenos para conversar sobre una solución personalizada para tu espacio.</p>
+              <a class="button button--linea" href="/contacto?tipo=propietario">
+                Solicitar asesoría<svg class="ico"><use href="#i-arrow-right"></use></svg>
               </a>
             </div>
           </div>
         </div>
       </section>
-      <section class="seccion contacto__page no-padding">
-        <div class="contenedor contenido__contacto">
-          <h2>Nuestra promesa y valores</h2>
-          <p>
-            Somos una empresa que ofrece servicios de diseño, fabricación y
-            reparación de cualquier mueble en melamina. Elíjanos por nuestra
-            experiencia, compromiso y garantia en nuestro trabajo.
-          </p>
-          <a href="contacto" class="button">Contáctanos</a>
-        </div>
-      </section>
+      <!--contacto fin-->
     </main>
     <!--main fin-->
 

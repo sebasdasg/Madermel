@@ -29,87 +29,168 @@
     <meta name="twitter:title" content="Nosotros - Madermel" />
     <meta name="twitter:image" content="https://madermel.com/img/portal_nosotros.webp" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!--header inicio-->
     <div id="headerPlaceholder"></div>
-    <div class="header__page">
-      <div class="contenedor">
-        <div class="header__page-content">
-          <img src="img/portal_nosotros.webp" alt="Imagen portal nosotros" />
-          <div class="content__page contenedor">
-            <h1 class="content__title">Quiénes somos</h1>
-          </div>
-        </div>
-      </div>
-    </div>
     <!--header fin-->
-    <!--main nosotros inicio-->
-    <main class="main">
-      <section class="seccion page__nosotros">
-        <div class="quienes-somos contenedor">
-          <div class="quienes-somos-contenido">
-            <img src="img/logo_madermel.webp" alt="Logo de Madermel" />
+
+    <main>
+      <!--cabecera de página-->
+      <section class="page-hero">
+        <img class="page-hero__img" src="/img/portal_nosotros.webp" alt="" fetchpriority="high" />
+        <div class="contenedor">
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a href="/">Inicio</a><span aria-hidden="true">/</span><span>Nosotros</span>
+          </nav>
+          <span class="kicker kicker--claro kicker--linea">Quiénes somos</span>
+          <h1>Más de 18 años desarrollando mobiliario en melamine y madera.</h1>
+          <p>
+            Madermel S.A.C. diseña, fabrica e instala mobiliario a medida para proyectos residenciales, constructoras y propietarios en Lima.
+          </p>
+        </div>
+      </section>
+
+      <!--quienes somos-->
+      <section class="seccion">
+        <div class="contenedor intro intro--texto-primero">
+          <div class="intro__texto">
+            <span class="kicker">Madermel S.A.C.</span>
+            <h2>Nuestro compromiso con la calidad se refleja en cada proyecto.</h2>
             <p>
-              En MADERMEL S.A.C. nos enorgullece ofrecer productos y servicios de alta calidad en el rubro del melamine y madera. Con una trayectoria de 18 años en el mercado, nos hemos consolidado como líderes en el mercado, gracias a nuestra dedicación y compromiso con la excelencia. <br />
-              Nuestro compromiso con la calidad se refleja en cada proyecto que emprendemos. Desde muebles a medida hasta proyectos de diseño interior, nuestro equipo altamente capacitado y experimentado trabaja incansablemente para garantizar la satisfacción de nuestros clientes. <br />
-              Además de nuestra experiencia y dedicación, en MADERMEL S.A.C. valoramos la innovación y la creatividad. Nos esforzamos por estar a la vanguardia de las últimas tendencias y técnicas en diseño de melamine y madera, para ofrecer a nuestros clientes soluciones únicas y personalizadas. <br />
+              En MADERMEL S.A.C. nos enorgullece ofrecer productos y servicios de alta calidad en el rubro del melamine y madera. Con una trayectoria de 18 años en el mercado, nos hemos consolidado como líderes en el mercado, gracias a nuestra dedicación y compromiso con la excelencia.
+            </p>
+            <p>
+              Desde muebles a medida hasta proyectos de diseño interior, nuestro equipo altamente capacitado y experimentado trabaja incansablemente para garantizar la satisfacción de nuestros clientes.
+            </p>
+            <p>
+              Además de nuestra experiencia y dedicación, valoramos la innovación y la creatividad. Nos esforzamos por estar a la vanguardia de las últimas tendencias y técnicas en diseño de melamine y madera, para ofrecer a nuestros clientes soluciones únicas y personalizadas.
+            </p>
+            <p>
               Nos enorgullece nuestra reputación como empresa confiable y comprometida con la satisfacción del cliente. En MADERMEL S.A.C. no solo creamos muebles y proyectos excepcionales, también construimos relaciones duraderas basadas en la confianza y la calidad.
             </p>
           </div>
-          <div class="quienes-somos__valores">
-            <h3>Nuestros Valores</h3>
-            <div class="quienes-somos__box">
-              <div class="quienes-somos__valore-box">
-                <i class="icon"><svg class="icon-svg"><use href="#fa-gem"></use></svg></i>
-                <p>Integridad</p>
-              </div>
-              <div class="quienes-somos__valore-box">
-                <i class="icon"><svg class="icon-svg"><use href="#fa-handshake"></use></svg></i>
-                <p>Cooperación</p>
-              </div>
-              <div class="quienes-somos__valore-box">
-                <i class="icon"><svg class="icon-svg"><use href="#fa-heart"></use></svg></i>
-                <p>Pasión</p>
-              </div>
-              <div class="quienes-somos__valore-box">
-                <i class="icon"><svg class="icon-svg"><use href="#fa-chart-line"></use></svg></i>
-                <p>Confianza</p>
-              </div>
-              <div class="quienes-somos__valore-box">
-                <i class="icon"><svg class="icon-svg"><use href="#fa-star"></use></svg></i>
-                <p>Excelencia</p>
-              </div>
-            </div>
+          <div class="intro__img">
+            <img src="/img/tandem/tandem_03.webp" alt="Sala de juegos con muebles de melamine y madera fabricados por Madermel para el proyecto Tándem Parc" loading="lazy" />
           </div>
         </div>
       </section>
-      <section class="seccion propositos">
+
+      <!--cifras-->
+      <section class="seccion seccion--grafito cifras-seccion">
         <div class="contenedor">
-          <div class="proposito__item">
-            <img src="img/mission.webp" alt="" />
-            <div class="proposito__item-descripcion">
-              <h3>Misión</h3>
+          <div class="cifras">
+            <div class="cifras__item">
+              <span class="cifras__num">18+</span>
+              <span class="cifras__label">años de experiencia en el rubro</span>
+            </div>
+            <div class="cifras__item">
+              <span class="cifras__num">6</span>
+              <span class="cifras__label">proyectos de obra en nuestra galería</span>
+            </div>
+            <div class="cifras__item">
+              <span class="cifras__num">4</span>
+              <span class="cifras__label">constructoras que confían en nosotros</span>
+            </div>
+          </div>
+          <div class="clientes">
+            <p>Han trabajado con nosotros</p>
+            <ul>
+              <li>Checor</li>
+              <li>Marcan</li>
+              <li>AyD</li>
+              <li>Alcamo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--valores-->
+      <section class="seccion">
+        <div class="contenedor">
+          <div class="seccion__cabecera">
+            <div>
+              <span class="kicker">Nuestros valores</span>
+              <h2>Lo que guía cada proyecto que asumimos.</h2>
+            </div>
+          </div>
+          <div class="tarjetas tarjetas--5">
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-gema"></use></svg></span>
+              <h3>Integridad</h3>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-comunes"></use></svg></span>
+              <h3>Cooperación</h3>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-corazon"></use></svg></span>
+              <h3>Pasión</h3>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-escudo"></use></svg></span>
+              <h3>Confianza</h3>
+            </article>
+            <article class="tarjeta">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-estrella"></use></svg></span>
+              <h3>Excelencia</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--mision y vision-->
+      <section class="seccion seccion--arena">
+        <div class="contenedor">
+          <div class="proposito">
+            <article class="tarjeta proposito__item">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-objetivo"></use></svg></span>
+              <span class="kicker">Misión</span>
               <p>
                 En MADERMEL S.A.C., ofrecemos soluciones en melamine y puertas contraplacadas, combinando calidad, diseño e innovación para satisfacer las necesidades de nuestros clientes con excelencia y compromiso.
               </p>
-            </div>
-          </div>
-          <div class="proposito__item">
-            <img src="img/view.webp" alt="" />
-            <div class="proposito__item-descripcion">
-              <h3>Visión</h3>
+            </article>
+            <article class="tarjeta proposito__item">
+              <span class="tarjeta__icono"><svg class="ico"><use href="#i-ojo"></use></svg></span>
+              <span class="kicker">Visión</span>
               <p>
                 Convertirnos en la empresa líder en el mercado de melamine y madera, reconocida por nuestra excelencia en calidad, innovación constante y compromiso con la satisfacción del cliente. Buscamos ser reconocidos por nuestro destacado diseño y fabricación de productos únicos y de alta calidad, contribuyendo al desarrollo sostenible de nuestra comunidad y al cuidado del medio ambiente.
               </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--contacto-->
+      <section class="seccion">
+        <div class="contenedor">
+          <div class="publicos">
+            <div class="publico publico--oscuro">
+              <span class="kicker">Inmobiliarias y constructoras</span>
+              <h3>Solicita una propuesta comercial para tu proyecto.</h3>
+              <p>Cuéntanos sobre el desarrollo, los ambientes y el tipo de mobiliario que requieres.</p>
+              <a class="button" href="/contacto?tipo=inmobiliaria">
+                Conversemos sobre tu proyecto<svg class="ico"><use href="#i-mail"></use></svg>
+              </a>
+            </div>
+            <div class="publico publico--claro">
+              <span class="kicker">Propietarios</span>
+              <h3>¿Buscas mobiliario para tu departamento?</h3>
+              <p>Escríbenos para conversar sobre una solución personalizada para tu espacio.</p>
+              <a class="button button--linea" href="/contacto?tipo=propietario">
+                Solicitar asesoría<svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </a>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <!--main nosotros fin-->
+
     <!--footer inicio-->
     <div id="footerPlaceholder"></div>
     <!--footer fin-->

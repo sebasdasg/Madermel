@@ -29,6 +29,9 @@
     <meta name="twitter:title" content="Contacto - Madermel" />
     <meta name="twitter:image" content="https://madermel.com/img/portal_contact.webp" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -37,94 +40,114 @@
     <div id="headerPlaceholder"></div>
     <!--header fin-->
 
-    <!--main contacto inicio-->
-    <div class="header__page">
-      <div class="contenedor">
-        <div class="header__page-content">
-          <img src="img/portal_contact.webp" alt="Imagen portal contacto" />
-          <div class="content__page contenedor">
-            <h1 class="content__title">Conversemos sobre tu proyecto</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <main class="main">
-      <section class="seccion">
+    <main>
+      <!--cabecera de página-->
+      <section class="page-hero">
+        <img class="page-hero__img" src="/img/portal_contact.webp" alt="" fetchpriority="high" />
         <div class="contenedor">
-          <div class="contacto__intro">
-            <p>
-              Cuéntanos qué necesitas fabricar o instalar y te respondemos a la
-              brevedad. Trabajamos tanto con constructoras — closets, cocinas
-              y áreas comunes para departamentos — como con proyectos a
-              medida para tu hogar u oficina, con el respaldo de más de 18
-              años de experiencia en el rubro del melamine y la madera.
-            </p>
-          </div>
+          <nav class="migas" aria-label="Ruta de navegación">
+            <a href="/">Inicio</a><span aria-hidden="true">/</span><span>Contacto</span>
+          </nav>
+          <span class="kicker kicker--claro kicker--linea">Contacto</span>
+          <h1>Conversemos sobre tu proyecto.</h1>
+          <p>
+            Cuéntanos qué necesitas fabricar o instalar y te respondemos a la brevedad.
+          </p>
+        </div>
+      </section>
 
-          <div class="contacto__grid">
-            <div class="contacto__info">
-              <div class="contacto__info-item">
-                <i class="icon"><svg class="icon-svg"><use href="#fa-envelope"></use></svg></i>
+      <section class="seccion">
+        <div class="contenedor contacto__grid">
+          <div class="contacto__info">
+            <span class="kicker">Atención comercial</span>
+            <h2>Elige la conversación que necesitas iniciar.</h2>
+            <p class="texto-suave">
+              Trabajamos tanto con constructoras — closets, cocinas y áreas comunes para departamentos — como con proyectos a medida para tu hogar u oficina, con el respaldo de más de 18 años de experiencia en el rubro del melamine y la madera.
+            </p>
+
+            <ul class="contacto__datos">
+              <li>
+                <span class="contacto__icono"><svg class="ico"><use href="#i-mail"></use></svg></span>
                 <div>
                   <h3>Correo</h3>
                   <a href="mailto:ventas1@madermel.com">ventas1@madermel.com</a>
                 </div>
-              </div>
-              <div class="contacto__info-item">
-                <i class="icon"><svg class="icon-svg"><use href="#fa-location-dot"></use></svg></i>
+              </li>
+              <li>
+                <span class="contacto__icono"><svg class="ico"><use href="#i-pin"></use></svg></span>
                 <div>
                   <h3>Ubicación</h3>
                   <p>San Martín de Porres - Lima</p>
                 </div>
-              </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contacto__form">
+            <div
+              id="mensajeExito"
+              class="form__mensaje form__mensaje--exito"
+              role="status"
+              hidden
+            >
+              Gracias, tu mensaje fue enviado. Te responderemos a la brevedad.
+            </div>
+            <div
+              id="mensajeError"
+              class="form__mensaje form__mensaje--error"
+              role="alert"
+              hidden
+            >
+              No pudimos enviar tu mensaje. Escríbenos directamente al
+              correo ventas1@madermel.com.
             </div>
 
-            <div class="contacto__form">
-              <div
-                id="mensajeExito"
-                class="form__mensaje form__mensaje--exito"
-                style="display: none"
-              >
-                Gracias, tu mensaje fue enviado. Te responderemos a la brevedad.
+            <form action="/enviar-contacto.php" method="POST">
+              <fieldset class="form__tipo">
+                <legend>¿Quién nos escribe?</legend>
+                <div class="form__tipo-opciones">
+                  <label class="form__opcion">
+                    <input type="radio" name="tipo" value="inmobiliaria" checked />
+                    <span>
+                      <strong>Inmobiliaria o constructora</strong>
+                      Propuesta comercial para un proyecto
+                    </span>
+                  </label>
+                  <label class="form__opcion">
+                    <input type="radio" name="tipo" value="propietario" />
+                    <span>
+                      <strong>Propietario</strong>
+                      Mobiliario para mi departamento o casa
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+              <div class="form__grupo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required />
               </div>
-              <div
-                id="mensajeError"
-                class="form__mensaje form__mensaje--error"
-                style="display: none"
-              >
-                No pudimos enviar tu mensaje. Escríbenos directamente al
-                correo ventas1@madermel.com.
+              <div class="form__grupo">
+                <label for="contacto">Teléfono o correo</label>
+                <input type="text" id="contacto" name="contacto" required />
               </div>
-
-              <form action="/enviar-contacto.php" method="POST">
-                <div class="form__grupo">
-                  <label for="nombre">Nombre</label>
-                  <input type="text" id="nombre" name="nombre" autocomplete="name" required />
-                </div>
-                <div class="form__grupo">
-                  <label for="contacto">Teléfono o correo</label>
-                  <input type="text" id="contacto" name="contacto" required />
-                </div>
-                <div class="form__grupo">
-                  <label for="mensaje">Mensaje</label>
-                  <textarea id="mensaje" name="mensaje" required></textarea>
-                </div>
-                <div class="form__honeypot" aria-hidden="true">
-                  <label for="web">No completar este campo</label>
-                  <input
-                    type="text"
-                    id="web"
-                    name="web"
-                    tabindex="-1"
-                    autocomplete="off"
-                  />
-                </div>
-                <button type="submit" class="button form__submit">
-                  Enviar mensaje
-                </button>
-              </form>
-            </div>
+              <div class="form__grupo">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+              </div>
+              <div class="form__honeypot" aria-hidden="true">
+                <label for="web">No completar este campo</label>
+                <input
+                  type="text"
+                  id="web"
+                  name="web"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+              <button type="submit" class="button form__submit">
+                Enviar mensaje<svg class="ico"><use href="#i-arrow-right"></use></svg>
+              </button>
+            </form>
           </div>
         </div>
       </section>
@@ -140,9 +163,14 @@
       const parametros = new URLSearchParams(window.location.search);
       const estado = parametros.get("enviado");
       if (estado === "1") {
-        document.getElementById("mensajeExito").style.display = "block";
+        document.getElementById("mensajeExito").hidden = false;
       } else if (estado === "0") {
-        document.getElementById("mensajeError").style.display = "block";
+        document.getElementById("mensajeError").hidden = false;
+      }
+      /* Los botones del sitio llegan con ?tipo=inmobiliaria o ?tipo=propietario */
+      const tipo = parametros.get("tipo");
+      if (tipo === "inmobiliaria" || tipo === "propietario") {
+        document.querySelector('input[name="tipo"][value="' + tipo + '"]').checked = true;
       }
     </script>
   </body>

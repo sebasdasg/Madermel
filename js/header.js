@@ -4,93 +4,78 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("headerPlaceholder").innerHTML = data;
-      /* El botón Cotizar no tiene sentido dentro de la propia página de contacto */
+      /* El botón fijo no tiene sentido dentro de la propia página de contacto */
       if (/^\/contacto/.test(location.pathname)) {
         const cta = document.getElementById("cta-cotizar");
         if (cta) cta.remove();
       }
-      /*==================== SHOW MENU ====================*/
-      const navMenu = document.getElementById("nav-menu"),
-        navToggle = document.getElementById("nav-toggle"),
-        navClose = document.getElementById("nav-close");
+      marcarEnlaceActivo();
 
-      /*===== MENU SHOW =====*/
-      /* Validate if constant exists */
-      if (navToggle) {
-        navToggle.addEventListener("click", () => {
-          navMenu.classList.add("show-menu");
-          document.body.classList.add("no-scroll");
-        });
+      /*==================== MENÚ EN CELULARES ====================*/
+      const navMenu = document.getElementById("nav-menu"),
+        navToggle = document.getElementById("nav-toggle");
+
+      function abrirMenu(abrir) {
+        // El panel empieza justo debajo de la barra (cambia según si la barra superior está visible)
+        if (abrir) navMenu.style.top = document.querySelector(".navbar").getBoundingClientRect().bottom + "px";
+        navMenu.classList.toggle("show-menu", abrir);
+        navToggle.setAttribute("aria-expanded", abrir);
+        navToggle.setAttribute("aria-label", abrir ? "Cerrar menú" : "Abrir menú");
+        document.body.classList.toggle("no-scroll", abrir);
+        if (!abrir) cerrarSubmenuProyectos();
       }
-      /*===== MENU HIDDEN =====*/
-      /* Validate if constant exists */
-      if (navClose) {
-        navClose.addEventListener("click", () => {
-          navMenu.classList.remove("show-menu");
-          document.body.classList.remove("no-scroll");
-          cerrarSubmenuProyectos();
-        });
-      }
-      /*===== SUBMENU PROYECTOS =====*/
+
+      navToggle.addEventListener("click", () => {
+        abrirMenu(!navMenu.classList.contains("show-menu"));
+      });
+
+      // Al elegir un enlace (por ejemplo "Cómo trabajamos" dentro del inicio) se cierra el menú
+      navMenu.querySelectorAll("a").forEach((enlace) => {
+        enlace.addEventListener("click", () => abrirMenu(false));
+      });
+
+      /*===== SUBMENÚ PROYECTOS =====*/
       const subToggleProyectos = document.getElementById("nav-sub-toggle-proyectos"),
         sublistProyectos = document.getElementById("nav-sublist-proyectos");
 
       function cerrarSubmenuProyectos() {
-        if (subToggleProyectos && sublistProyectos) {
-          sublistProyectos.classList.remove("nav__sublist--open");
-          subToggleProyectos.setAttribute("aria-expanded", "false");
-        }
+        sublistProyectos.classList.remove("nav__sublist--open");
+        subToggleProyectos.setAttribute("aria-expanded", "false");
       }
 
-      if (subToggleProyectos && sublistProyectos) {
-        subToggleProyectos.addEventListener("click", (e) => {
-          e.stopPropagation();
-          const abierto = sublistProyectos.classList.toggle("nav__sublist--open");
-          subToggleProyectos.setAttribute("aria-expanded", abierto);
-        });
-      }
-      /*==========DHOW MENU INFO============*/
-      const navInfo = document.getElementById('nav-info'),
-        infoIcon = document.getElementById('nav-info-icon'),
-        infoClose = document.getElementById('nav-close-info');
-        /*===MENU INFO===*/
-        if(infoIcon) {
-          infoIcon.addEventListener("click", () => {
-            navInfo.classList.add("show-menu-info");
-            document.body.classList.add("no-scroll");
-          });
-        }
-        /*===MENU INFO - CLOSE===*/
-        if(infoClose){
-          infoClose.addEventListener("click", () => {
-            navInfo.classList.remove("show-menu-info");
-            document.body.classList.remove("no-scroll");
-          });
-        }
-        /*===== CERRAR AL HACER CLIC AFUERA =====*/
-        document.addEventListener("click", (e) => {
-          if (
-            navMenu.classList.contains("show-menu") &&
-            !navMenu.contains(e.target) &&
-            e.target !== navToggle &&
-            !navToggle.contains(e.target)
-          ) {
-            navMenu.classList.remove("show-menu");
-            document.body.classList.remove("no-scroll");
-            cerrarSubmenuProyectos();
-          }
-          if (
-            navInfo.classList.contains("show-menu-info") &&
-            !navInfo.contains(e.target) &&
-            e.target !== infoIcon &&
-            !infoIcon.contains(e.target)
-          ) {
-            navInfo.classList.remove("show-menu-info");
-            document.body.classList.remove("no-scroll");
-          }
-        });
-        //aqui iba slider
+      subToggleProyectos.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const abierto = sublistProyectos.classList.toggle("nav__sublist--open");
+        subToggleProyectos.setAttribute("aria-expanded", abierto);
+      });
 
+      /*===== CERRAR AL HACER CLIC AFUERA O CON ESCAPE =====*/
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".nav__item--has-sub")) cerrarSubmenuProyectos();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "Escape") return;
+        cerrarSubmenuProyectos();
+        if (navMenu.classList.contains("show-menu")) abrirMenu(false);
+      });
+      // Si se agranda la ventana con el menú abierto, se libera el scroll
+      window.matchMedia("(min-width: 980px)").addEventListener("change", (e) => {
+        if (e.matches) abrirMenu(false);
+      });
     });
 });
 
+/* Resalta en el menú la sección en la que está el visitante */
+function marcarEnlaceActivo() {
+  const ruta = location.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
+  let seccion = null;
+  if (ruta === "/servicios") seccion = "/servicios";
+  else if (ruta === "/proyectos" || ruta.startsWith("/proyecto_")) seccion = "/proyectos";
+  else if (ruta === "/nosotros") seccion = "/nosotros";
+  if (!seccion) return;
+  const enlace = document.querySelector('.nav__link[href="' + seccion + '"]');
+  if (enlace) {
+    enlace.classList.add("activo");
+    enlace.setAttribute("aria-current", "page");
+  }
+}

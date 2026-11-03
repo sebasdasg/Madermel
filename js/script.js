@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-  
+
   //CARGAR FOOTER
 cargarFragmento("footerPlaceholder", "/components/footer.html");
 
@@ -12,11 +12,8 @@ function cargarFragmento(idContenedor, rutaHTML) {
       document.getElementById(idContenedor).innerHTML = html;
     });
 }
+// Sombra en la cabecera cuando la página ya se desplazó
 window.addEventListener("scroll", function(){
-  const header = this.document.querySelector(".header");
-  const logo = this.document.querySelector(".contenedor-header");
-  
-  header.classList.toggle("sticky", this.window.scrollY > 0);
-  logo.classList.toggle("sticky", this.window.scrollY > 0);
- 
-});
+  const header = document.querySelector(".header");
+  if (header) header.classList.toggle("sticky", window.scrollY > 40);
+}, { passive: true });

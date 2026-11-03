@@ -1,187 +1,89 @@
-.header__page.tandem {
-  height: 25vh;
-  background-color: var(--second-color);
+/*=============== PÁGINA DE CADA PROYECTO ===============*/
+.page-hero--proyecto {
+  padding: 8rem 0 7rem;
 }
-.content__page.contenedor__tandem {
-  justify-content: center;
+
+/* Filtros por categoría: pestañas tipo "pastilla" */
+.projects__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 4rem;
 }
-.content__title.title__tandem {
-  border: none;
-  padding: 0;
+.projects__item {
+  cursor: pointer;
+  padding: 0.9rem 1.8rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 99rem;
+  background-color: var(--color-blanco);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.projects__item:hover {
+  border-color: var(--color-primario);
+}
+.projects__title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--color-texto);
+  transition: color 0.2s;
+}
+.active-project {
+  background-color: var(--color-texto);
+  border-color: var(--color-texto);
+}
+.active-project .projects__title {
+  color: var(--color-fondo);
+}
+
+/* Galería */
+.grid {
+  display: grid;
+  gap: 1.6rem;
+}
+.proyecto__madermel {
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 576px) {
+  .proyecto__madermel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 900px) {
+  .proyecto__madermel {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
 .projects__card {
-  background-color: var(--container-color);
   cursor: pointer;
+}
+.projects__shape {
+  background-color: var(--color-blanco);
+  border-radius: var(--radio);
+  overflow: hidden;
+  transition: box-shadow 0.25s;
+}
+.projects__card:hover .projects__shape {
+  box-shadow: var(--sombra-media);
 }
 .projects__img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: 0.4s;
-  border-radius: 5px;
-  box-shadow: var(--box-shadow);
-}
-.projects__shape {
-  border-radius: 0.5rem 0.5rem 0 0;
-  text-align: center;
-  padding: 0.25rem 0;
-}
-.projects__name {
-  font-size: 1.5rem; /* var(--normal-font-size) */
-  color: var(--seconds-color);
+  transition: transform 0.5s ease;
 }
 .projects__card:hover .projects__img {
-  transform: translateY(-0.25rem);
+  transform: scale(1.03);
 }
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-.proyecto__madermel {
-  padding: 5rem 0;
-}
-.madermel_areas {
-  font-size: 3rem;
+.projects__name {
+  position: relative; /* por encima de la foto al hacer zoom */
+  background-color: var(--color-blanco);
+  padding: 1.4rem 1.8rem;
+  font-size: 1.45rem;
   font-weight: 600;
-  color: var(--second-color);
-  position: relative;
-  /* border-bottom: 3px solid var(--first-color); */
-}
-
-.projects__filters {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem 2rem;
-  /* margin-top: 2rem; */
-  /* margin-bottom: 3.5rem; */
-}
-.projects__line {
-  position: relative;
-}
-.projects__line::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 40px;
-  background-color: var(--text-color-light);
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-}
-.projects__item {
-  display: flex;
-  cursor: pointer;
-  flex-direction: column;
-}
-
-.madermel_areas::after {
-  content: "";
-  display: inline-block;
-  width: 20%;
-  height: 0.5rem;
-  position: absolute;
-  background-color: var(--first-color);
-  bottom: -1rem;
-  left: 0;
-  border-radius: 3px;
-}
-
-.projects__title {
-  font-size: 1.8rem;
-  color: var(--second-color);
-  opacity: 0.75;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  transition: 0.4s;
-}
-.active-project .projects__title {
-  opacity: 1;
-  font-weight: 600;
-}
-/* Galeria LigthBox */
-.container-img {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transform: translateX(-100%);
-  background-color: rgba(12, 22, 32, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.4s ease-in;
-  z-index: 9;
-}
-.move {
-  transform: translateX(0);
-}
-.img-show {
-  width: 85%;
-  transform: scale(0);
-  display: block;
-  object-fit: contain;
-  border-radius: 5px;
-  transition: transform 0.2s 0.4s;
-}
-.show {
-  transform: scale(1);
-}
-.x-lightBox {
-  position: absolute;
-  color: var(--first-color);
-  top: 10rem;
-  right: 3rem;
-  font-size: 3rem;
-  cursor: pointer;
-}
-@media screen and (min-width: 576px) {
-  .proyecto__madermel {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-  }
-}
-@media screen and (min-width: 756px) {
-  .proyecto__madermel {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-  }
-}
-@media screen and (min-width: 588px) {
-  .projects__filters {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem 1.5rem;
-  }
-  .img-show {
-    width: 85%;
-  }
-  .x-lightBox {
-    top: 7.5rem;
-  }
-}
-@media screen and (min-width: 710px) {
-  .img-show {
-    height: 70%;
-    width: auto;
-  }
-}
-@media screen and (min-width: 968px) {
-  .prueba {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 2rem;
-  }
-  .projects__item {
-    margin-left: 2.5rem;
-  }
-  .projects__content {
-    gap: 5rem;
-  }
-  .img-show {
-    height: 80%;
-  }
+  letter-spacing: 0;
+  color: var(--color-texto);
 }
 /* Videos dentro de la galería de un proyecto */
 .projects__video {
@@ -192,45 +94,89 @@
   aspect-ratio: 16 / 9;
   object-fit: contain;
   background-color: #000;
-  border-radius: 5px;
-  box-shadow: var(--box-shadow);
 }
-/* Filtros con 4 categorías en vez de 3 */
-@media screen and (min-width: 588px) {
-  .projects__filters--4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
+
+.proyecto__volver .ico {
+  transition: transform 0.2s;
 }
-/* Filtros con 5 categorías: 3 columnas en tablet, 5 en escritorio */
-@media screen and (min-width: 968px) {
-  .projects__filters--5 {
-    grid-template-columns: repeat(5, 1fr);
-  }
+.proyecto__volver:hover .ico {
+  transform: translateX(-3px);
 }
-/* Controles de la galería ampliada */
+
+/*=============== GALERÍA AMPLIADA (LIGHTBOX) ===============*/
+.container-img {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20 26 25 / 94%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.move {
+  opacity: 1;
+  visibility: visible;
+}
 .img-show {
-  transition: transform 0.2s 0.4s, opacity 0.2s;
+  width: 88%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radio);
+  transform: scale(0.96);
+  transition: transform 0.3s, opacity 0.2s;
 }
+.show {
+  transform: scale(1);
+}
+.x-lightBox {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: grid;
+  place-items: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  background-color: rgb(247 245 240 / 12%);
+  color: var(--color-fondo);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.x-lightBox:hover {
+  background-color: rgb(247 245 240 / 25%);
+}
+@media screen and (min-width: 710px) {
+  .img-show {
+    width: auto;
+    height: 80vh;
+    max-width: 82%;
+  }
+}
+/* Controles de la galería ampliada (los crea js/filter.js) */
 .lightbox__nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 5rem;
-  height: 5rem;
+  width: 4.8rem;
+  height: 4.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.18);
-  color: var(--first-color);
-  font-size: 2.2rem;
+  background-color: rgb(247 245 240 / 12%);
+  color: var(--color-fondo);
+  font-size: 2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s;
 }
 .lightbox__nav:hover,
 .lightbox__nav:focus-visible {
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgb(247 245 240 / 25%);
 }
 .lightbox__nav[hidden],
 .lightbox__count[hidden] {
@@ -255,9 +201,9 @@
   transform: translateX(-50%);
   padding: 0.4rem 1.4rem;
   border-radius: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--white-color);
-  font-size: 1.6rem;
+  background-color: rgb(247 245 240 / 12%);
+  color: var(--color-fondo);
+  font-size: 1.4rem;
 }
 @media screen and (min-width: 768px) {
   .lightbox__nav--prev {
@@ -267,4 +213,3 @@
     right: 3rem;
   }
 }
-

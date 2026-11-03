@@ -67,19 +67,26 @@
     <meta name="twitter:title" content="Proyecto NOMBRE DEL PROYECTO | NOMBRE DEL CLIENTE - Madermel" />
     <meta name="twitter:image" content="https://madermel.com/img/NOMBRE/NOMBRE_001.webp" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!--header inicio-->
     <div id="headerPlaceholder"></div>
-    <div class="header__page tandem">
+    <section class="page-hero page-hero--proyecto">
+      <img class="page-hero__img" src="/img/RUTA/DE/LA/FOTO_PORTADA.webp" alt="" fetchpriority="high" />
       <div class="contenedor">
-        <div class="content__page contenedor contenedor__tandem">
-          <h1 class="content__title title__tandem">Proyecto NOMBRE DEL PROYECTO</h1>
-        </div>
+        <nav class="migas" aria-label="Ruta de navegación">
+          <a href="/">Inicio</a><span aria-hidden="true">/</span><a href="/proyectos">Proyectos</a><span aria-hidden="true">/</span><span>NOMBRE DEL PROYECTO</span>
+        </nav>
+        <span class="kicker kicker--claro kicker--linea">Cliente · NOMBRE DEL CLIENTE</span>
+        <h1>Proyecto NOMBRE DEL PROYECTO</h1>
+        <p>Categorías del proyecto.</p>
       </div>
-    </div>
+    </section>
     <!--header fin-->
     <!-- main inicio -->
     <main class="contenedor seccion">
@@ -145,11 +152,7 @@
         <img src="" alt="" class="img-show" />
         <i class="icon x-lightBox"><svg class="icon-svg"><use href="#fa-xmark"></use></svg></i>
       </div>
-      <a class="button" href="/proyectos"
-          >Volver<i class="icon portal__button-icon"
-            ><svg class="icon-svg"><use href="#fa-left-long"></use></svg
-          ></i
-        ></a>
+      <a class="button button--linea proyecto__volver" href="/proyectos"><svg class="ico"><use href="#i-arrow-left"></use></svg>Volver a proyectos</a>
     </main>
     <!-- main fin -->
 

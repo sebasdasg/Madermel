@@ -90,7 +90,7 @@
 .projects__title {
   font-size: 1.8rem;
   color: var(--second-color);
-  opacity: 0.6;
+  opacity: 0.75;
   font-weight: 500;
   margin-bottom: 0.5rem;
   transition: 0.4s;
@@ -183,3 +183,88 @@
     height: 80%;
   }
 }
+/* Videos dentro de la galería de un proyecto */
+.projects__video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background-color: #000;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+/* Filtros con 4 categorías en vez de 3 */
+@media screen and (min-width: 588px) {
+  .projects__filters--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* Filtros con 5 categorías: 3 columnas en tablet, 5 en escritorio */
+@media screen and (min-width: 968px) {
+  .projects__filters--5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+/* Controles de la galería ampliada */
+.img-show {
+  transition: transform 0.2s 0.4s, opacity 0.2s;
+}
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.18);
+  color: var(--first-color);
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.lightbox__nav:hover,
+.lightbox__nav:focus-visible {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.lightbox__nav[hidden],
+.lightbox__count[hidden] {
+  display: none;
+}
+.lightbox__nav--prev {
+  left: 1.2rem;
+}
+.lightbox__nav--next {
+  right: 1.2rem;
+}
+.lightbox__nav--prev .icon-svg {
+  transform: rotate(90deg);
+}
+.lightbox__nav--next .icon-svg {
+  transform: rotate(-90deg);
+}
+.lightbox__count {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.4rem 1.4rem;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white-color);
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .lightbox__nav--prev {
+    left: 3rem;
+  }
+  .lightbox__nav--next {
+    right: 3rem;
+  }
+}
+

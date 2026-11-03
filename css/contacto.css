@@ -37,15 +37,6 @@
   color: var(--black-color);
   font-size: 1.6rem;
 }
-.contacto__whatsapp {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.contacto__whatsapp i {
-  font-size: 2rem;
-}
 .contacto__form {
   background-color: var(--container-ligth-color);
   padding: 3rem;
@@ -68,7 +59,7 @@
   border: 1px solid var(--text-color-light);
   border-radius: 0.5rem;
   font-family: var(--fuente);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   background-color: var(--white-color);
 }
 .form__grupo textarea {

@@ -6,7 +6,7 @@ cargarFragmento("footerPlaceholder", "/components/footer.html");
 })
 
 function cargarFragmento(idContenedor, rutaHTML) {
-  fetch(rutaHTML)
+  fetch(rutaHTML, { cache: "no-cache" })
     .then((response) => response.text())
     .then((html) => {
       document.getElementById(idContenedor).innerHTML = html;

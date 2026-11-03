@@ -5,3 +5,11 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^.]+)$ $1.html [L,QSA]
+
+# CSS y JS: el navegador debe revalidar siempre (si no cambió, responde 304 sin descargar).
+# Evita que los visitantes vean estilos o menús viejos después de subir cambios.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
     <title>Contacto - Madermel | Cotiza tu proyecto en melamine y madera</title>
     <meta
       name="description"
-      content="Escríbenos por WhatsApp o completa el formulario. Atendemos consultas todos los días de 8am a 6pm. San Martín de Porres - Lima."
+      content="Completa el formulario o escríbenos por correo. Atendemos consultas todos los días de 8am a 6pm. San Martín de Porres - Lima."
     />
     <link rel="canonical" href="https://madermel.com/contacto" />
 
@@ -21,7 +22,7 @@
     <meta property="og:title" content="Contacto - Madermel | Cotiza tu proyecto en melamine y madera" />
     <meta
       property="og:description"
-      content="Escríbenos por WhatsApp o completa el formulario. Atendemos consultas todos los días de 8am a 6pm."
+      content="Completa el formulario o escríbenos por correo. Atendemos consultas todos los días de 8am a 6pm."
     />
     <meta property="og:image" content="https://madermel.com/img/portal_contact.webp" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -42,7 +43,7 @@
         <div class="header__page-content">
           <img src="img/portal_contact.webp" alt="Imagen portal contacto" />
           <div class="content__page contenedor">
-            <div class="content__title">Conversemos sobre tu proyecto</div>
+            <h1 class="content__title">Conversemos sobre tu proyecto</h1>
           </div>
         </div>
       </div>
@@ -64,13 +65,6 @@
           <div class="contacto__grid">
             <div class="contacto__info">
               <div class="contacto__info-item">
-                <i class="icon"><svg class="icon-svg"><use href="#fa-square-phone"></use></svg></i>
-                <div>
-                  <h3>Teléfono</h3>
-                  <a href="tel:+51991178471">+51 991 178 471</a>
-                </div>
-              </div>
-              <div class="contacto__info-item">
                 <i class="icon"><svg class="icon-svg"><use href="#fa-envelope"></use></svg></i>
                 <div>
                   <h3>Correo</h3>
@@ -84,15 +78,6 @@
                   <p>San Martín de Porres - Lima</p>
                 </div>
               </div>
-              <a
-                href="https://wa.me/51991178471"
-                class="button contacto__whatsapp"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="icon"><svg class="icon-svg"><use href="#fa-whatsapp"></use></svg></i>
-                Escríbenos por WhatsApp
-              </a>
             </div>
 
             <div class="contacto__form">
@@ -108,14 +93,14 @@
                 class="form__mensaje form__mensaje--error"
                 style="display: none"
               >
-                No pudimos enviar tu mensaje. Escríbenos directamente por
-                WhatsApp o al correo ventas1@madermel.com.
+                No pudimos enviar tu mensaje. Escríbenos directamente al
+                correo ventas1@madermel.com.
               </div>
 
               <form action="/enviar-contacto.php" method="POST">
                 <div class="form__grupo">
                   <label for="nombre">Nombre</label>
-                  <input type="text" id="nombre" name="nombre" required />
+                  <input type="text" id="nombre" name="nombre" autocomplete="name" required />
                 </div>
                 <div class="form__grupo">
                   <label for="contacto">Teléfono o correo</label>

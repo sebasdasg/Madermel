@@ -28,4 +28,20 @@
     <loc>https://madermel.com/proyecto_magnolias</loc>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://madermel.com/proyecto_dalias</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://madermel.com/proyecto_cordova</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://madermel.com/proyecto_porta360</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://madermel.com/proyecto_montalcamo</loc>
+    <priority>0.5</priority>
+  </url>
 </urlset>

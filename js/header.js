@@ -1,9 +1,14 @@
 //CARGAR HEADER
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/components/header.html")
+  fetch("/components/header.html", { cache: "no-cache" })
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("headerPlaceholder").innerHTML = data;
+      /* El botón Cotizar no tiene sentido dentro de la propia página de contacto */
+      if (/^\/contacto/.test(location.pathname)) {
+        const cta = document.getElementById("cta-cotizar");
+        if (cta) cta.remove();
+      }
       /*==================== SHOW MENU ====================*/
       const navMenu = document.getElementById("nav-menu"),
         navToggle = document.getElementById("nav-toggle"),

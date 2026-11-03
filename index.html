@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
     <title>Madermel SAC | Muebles de melamine y madera a medida en Lima</title>
     <meta
       name="description"
@@ -42,7 +43,6 @@
         "name": "Madermel S.A.C.",
         "image": "https://madermel.com/img/logo_madermel.webp",
         "url": "https://madermel.com/",
-        "telephone": "+51991178471",
         "email": "ventas1@madermel.com",
         "description": "Fabricación e instalación de closets, cocinas, puertas y muebles a medida en melamine y madera en Lima, Perú.",
         "address": {
@@ -78,9 +78,57 @@
     <div id="headerPlaceholder"></div>
     <!--header fin-->
 
-    <!--slider inicio-->
-    <div id="sliderPlaceholder"></div>
-    <!--slider fin-->
+    <!--hero inicio-->
+    <section class="hero">
+      <img
+        class="hero__img"
+        src="/img/tandem/tandem_03.webp"
+        alt="Sala de juegos con muebles de melamine y madera fabricados por Madermel"
+        fetchpriority="high"
+      />
+      <div class="contenedor hero__content">
+        <p class="hero__kicker">Melamine y madera a medida · Lima</p>
+        <h1 class="hero__title">Muebles a medida que transforman tus espacios</h1>
+        <p class="hero__text">
+          Fabricamos e instalamos closets, cocinas, puertas y áreas comunes para constructoras y particulares.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="contacto">Cotizar proyecto</a>
+          <a class="button button--ghost" href="proyectos">Ver proyectos</a>
+        </div>
+      </div>
+    </section>
+    <!--hero fin-->
+
+    <!--confianza inicio-->
+    <section class="confianza" aria-label="Por qué confiar en Madermel">
+      <div class="contenedor">
+        <div class="confianza__grid">
+          <div class="confianza__item">
+            <span class="confianza__num">18+</span>
+            <span class="confianza__label">años de experiencia en el rubro</span>
+          </div>
+          <div class="confianza__item">
+            <span class="confianza__num">6</span>
+            <span class="confianza__label">proyectos de obra en nuestra galería</span>
+          </div>
+          <div class="confianza__item">
+            <span class="confianza__num">4</span>
+            <span class="confianza__label">constructoras que confían en nosotros</span>
+          </div>
+        </div>
+        <div class="confianza__clientes">
+          <p>Han trabajado con nosotros</p>
+          <ul>
+            <li>Checor</li>
+            <li>Marcan</li>
+            <li>AyD</li>
+            <li>Alcamo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--confianza fin-->
 
     <!--main inicio-->
     <main class="main">
@@ -209,16 +257,58 @@
               </a>
             </div>
             <div class="contenido__seccion-proyectos">
-              <a href="proyectos" class="card__proyecto">
+              <a href="proyecto_dalias" class="card__proyecto">
                 <div class="img__proyecto">
                   <img
-                    src="img/IMG_056.webp"
-                    alt="Closet del proyecto Cordova fabricado en melamine"
+                    src="img/dalias/dalias_areas_013.webp"
+                    alt="Recepción con panel de listones de madera y mesón de mármol del proyecto Dalias"
+                  />
+                </div>
+                <div class="contenido__proyecto">
+                  <h3>Dalias | Checor</h3>
+                  <p>Cocinas, Pasos y gradas, Áreas Comunes.</p>
+                </div>
+              </a>
+            </div>
+            <div class="contenido__seccion-proyectos">
+              <a href="proyecto_cordova" class="card__proyecto">
+                <div class="img__proyecto">
+                  <img
+                    src="img/cordova/cordova_closet_009.webp"
+                    alt="Walking clóset con repisas y cajones del proyecto Cordova"
                   />
                 </div>
                 <div class="contenido__proyecto">
                   <h3>Cordova | AyD</h3>
-                  <p>Clóset, Muebles de baño, Puerta de ascensor.</p>
+                  <p>Clóset, Muebles de baño, Pasos y gradas, Puertas.</p>
+                </div>
+              </a>
+            </div>
+            <div class="contenido__seccion-proyectos">
+              <a href="proyecto_porta360" class="card__proyecto">
+                <div class="img__proyecto">
+                  <img
+                    src="img/porta360/porta360_cocina_036.webp"
+                    alt="Cocina con muebles altos de melamine y torre de horno del proyecto Porta 360"
+                  />
+                </div>
+                <div class="contenido__proyecto">
+                  <h3>Porta 360 | Checor</h3>
+                  <p>Cocinas, Clóset, Muebles de baño, Lavanderías, Pasos y gradas.</p>
+                </div>
+              </a>
+            </div>
+            <div class="contenido__seccion-proyectos">
+              <a href="proyecto_montalcamo" class="card__proyecto">
+                <div class="img__proyecto">
+                  <img
+                    src="img/montalcamo/montalcamo_bano_002.webp"
+                    alt="Mueble de baño flotante en melamine con lavatorio del proyecto Mont"
+                  />
+                </div>
+                <div class="contenido__proyecto">
+                  <h3>Mont | Alcamo</h3>
+                  <p>Muebles de baño.</p>
                 </div>
               </a>
             </div>
@@ -233,7 +323,7 @@
             reparación de cualquier mueble en melamina. Elíjanos por nuestra
             experiencia, compromiso y garantia en nuestro trabajo.
           </p>
-          <a href="contacto" class="button">Contactanos</a>
+          <a href="contacto" class="button">Contáctanos</a>
         </div>
       </section>
     </main>
@@ -244,6 +334,5 @@
     <!--footer fin-->
     <script src="js/script.js"></script>
     <script src="js/header.js"></script>
-    <script src="js/slider.js"></script>
   </body>
 </html>

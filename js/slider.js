@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   //fijar menu
   //navegacionFija();
-  fetch("/components/slider.html")
+  fetch("/components/slider.html", { cache: "no-cache" })
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("sliderPlaceholder").innerHTML = data;

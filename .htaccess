@@ -1,6 +1,9 @@
 # Activa el motor de reescritura
 RewriteEngine On
 
+# Oculta la carpeta .git y el .gitignore: el despliegue desde GitHub los deja dentro de public_html
+RewriteRule (^|/)\.git - [R=404,L]
+
 # Reescribe URLs para que no incluyan las extensiones .html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

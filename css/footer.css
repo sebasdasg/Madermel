@@ -42,6 +42,23 @@
   font-size: 2rem;
   line-height: 1;
 }
+.footer__horario {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid rgb(247 245 240 / 12%);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.footer__horario .ico {
+  margin-top: 0.2rem;
+  color: #D9B597;
+}
+.footer__horario strong {
+  color: var(--color-fondo);
+  font-weight: 600;
+}
 .footer__legal {
   display: flex;
   flex-wrap: wrap;

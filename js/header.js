@@ -15,7 +15,7 @@ function gtag() {
 
 //Clic en los botones de cotizar (botón fijo y botón de la portada)
 document.addEventListener("click", function (e) {
-  const boton = e.target.closest(".cta-cotizar, .hero__actions a[href='contacto']");
+  const boton = e.target.closest(".cta-cotizar, .hero__actions a[href^='/contacto']");
   if (boton) gtag("event", "cotizar_click", { ubicacion: boton.classList.contains("cta-cotizar") ? "boton_fijo" : "portada" });
 });
 

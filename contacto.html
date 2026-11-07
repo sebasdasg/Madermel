@@ -164,6 +164,7 @@
       const estado = parametros.get("enviado");
       if (estado === "1") {
         document.getElementById("mensajeExito").hidden = false;
+        gtag("event", "generate_lead", { formulario: "contacto" });
       } else if (estado === "0") {
         document.getElementById("mensajeError").hidden = false;
       }

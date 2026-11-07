@@ -1,3 +1,24 @@
+//GOOGLE TAG MANAGER (Google Analytics): contenedor GTM-KJXHH2SW, medición G-PWDYYBKPWB
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+(function (w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+  var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s);
+  j.async = true;
+  j.src = "https://www.googletagmanager.com/gtm.js?id=" + i;
+  f.parentNode.insertBefore(j, f);
+})(window, document, "script", "dataLayer", "GTM-KJXHH2SW");
+
+//Clic en los botones de cotizar (botón fijo y botón de la portada)
+document.addEventListener("click", function (e) {
+  const boton = e.target.closest(".cta-cotizar, .hero__actions a[href='contacto']");
+  if (boton) gtag("event", "cotizar_click", { ubicacion: boton.classList.contains("cta-cotizar") ? "boton_fijo" : "portada" });
+});
+
 //CARGAR HEADER
 document.addEventListener("DOMContentLoaded", function () {
   fetch("/components/header.html", { cache: "no-cache" })
